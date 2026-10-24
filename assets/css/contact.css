@@ -1738,3 +1738,11 @@ body.cf .ct-faq__side .cf-kicker::before {
     font-size: var(--cf-fs-p)
   }
 }
+
+.cf-loading .ct-hero [data-aos] { opacity: 0 !important; }
+.cf-loading .ct-hero [data-aos="fade-up"] { transform: translate3d(0, 100px, 0) !important; }
+.cf-loading .ct-hero [data-aos="fade-down"] { transform: translate3d(0, -100px, 0) !important; }
+.cf-loading .ct-hero [data-aos="fade-left"] { transform: translate3d(100px, 0, 0) !important; }
+.cf-loading .ct-hero [data-aos="fade-right"] { transform: translate3d(-100px, 0, 0) !important; }
+.js .ct-hero__media { animation: none !important; }
+
