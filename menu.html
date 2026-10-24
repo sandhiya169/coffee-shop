@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Menu | Stackly - Specialty Coffee</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Zen+Maru+Gothic:wght@400;500;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" crossorigin="anonymous"
+    referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/menu.css">
+</head>
+
+<body class="cf">
+  <script>document.documentElement.classList.add('js', 'cf-loading')</script>
+
+  <!-- PRELOADER -->
+  <div class="cf-preloader" id="cfPreloader" role="status" aria-live="polite" aria-label="Loading Stackly">
+    <div class="cf-preloader__in">
+      <span class="cf-preloader__steam" aria-hidden="true"><i></i><i></i><i></i></span>
+      <img class="cf-preloader__logo" src="assets/images/stackly-logo.webp" alt="Stackly">
+      <p class="cf-preloader__txt">Brewing your experience</p>
+      <span class="cf-preloader__bar" aria-hidden="true"><i></i></span>
+    </div>
+  </div>
+
+  <!-- HEADER  -->
+  <header class="cf-header">
+    <div class="cf-header__in">
+      <a href="index.html" class="cf-logo" aria-label="Stackly home"><img src="assets/images/stackly-logo.webp"
+          alt="Stackly"></a>
+      <nav class="cf-nav" id="cfNav" aria-label="Main">
+        <a href="index.html">Home</a>
+        <a href="menu.html" class="is-active" aria-current="page">Menu</a>
+        <a href="origins.html">Origins</a>
+        <a href="experience.html">Experience</a>
+        <a href="contact.html">Contact</a>
+        <a href="login.html" class="cf-btn cf-login cf-nav__login"><i class="fa-solid fa-user"></i> Login</a>
+      </nav>
+      <div class="cf-tools">
+
+        <a href="login.html" class="cf-btn cf-login"><i class="fa-solid fa-user"></i> Login</a>
+        <button class="cf-burger" id="cfBurger" aria-label="Menu" aria-expanded="false"
+          aria-controls="cfNav"><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="cfm-hero" id="home">
+      <div class="cf-wrap">
+        <div class="cfm-hero__in">
+          <div class="cfm-hero__text">
+            <p class="cf-eyebrow cf-hero__tag" data-aos="fade-down" data-aos-delay="0" data-aos-duration="700"><i aria-hidden="true"></i>SPECIALTY COFFEE<span
+                class="cf-hero__tag-rest"> - THE MENU</span></p>
+            <h1 class="cf-display cf-h1 cf-h1--hero">
+              <span data-aos="fade-up" data-aos-delay="100" data-aos-duration="700">Find Your</span>
+              <span class="cf-h1__gold" data-aos="fade-up" data-aos-delay="220" data-aos-duration="700">Perfect Brew</span>
+            </h1>
+            <p class="cf-lead" data-aos="fade-up" data-aos-delay="340" data-aos-duration="700">From a quiet shot of espresso to a signature pour you will not
+              find anywhere else. Browse the menu, pair it with something baked, and make every cup your own.</p>
+            <div class="cf-actions" data-aos="fade-up" data-aos-delay="460" data-aos-duration="700">
+              <a href="404.html" class="cf-btn">Order online <span class="cf-btn__icon"><i
+                    class="fa-solid fa-arrow-right" aria-hidden="true"></i></span></a>
+              <a href="menu.html" class="cf-link--light cf-link--icon">Explore menu <span class="cf-btn__icon"><i
+                    class="fa-solid fa-arrow-right" aria-hidden="true"></i></span></a>
+            </div>
+            <div class="cf-trust" data-aos="fade-up" data-aos-delay="580" data-aos-duration="700">
+              <div class="cf-trust__faces">
+                <img src="assets/images/avatar-1.webp" alt="" width="42" height="42">
+                <img src="assets/images/avatar-2.webp" alt="" width="42" height="42">
+                <img src="assets/images/avatar-3.webp" alt="" width="42" height="42">
+              </div>
+              <p><b><i class="fa-solid fa-star" aria-hidden="true"></i>4.9 out of 5</b><small>from 2,400+
+                  regulars</small></p>
+            </div>
+          </div>
+          <aside class="cfm-pick" data-aos="fade-left" data-aos-delay="400" data-aos-duration="800" aria-label="Quick add">
+            <a href="404.html" aria-label="Order Flat White">
+              <img src="assets/images/image-3.webp" alt="" width="72" height="72">
+            </a>
+            <div class="cfm-pick__txt">
+              <h2 class="cf-display cfm-pick__name"><a href="404.html" class="cfm-card__link">Flat White</a></h2>
+              <p class="cfm-pick__sub">Velvety microfoam, double ristretto</p>
+              <span class="cf-display cfm-pick__price">$5.25</span>
+            </div>
+            <a href="404.html" class="cfm-add" aria-label="Add Flat White to your order">
+              <i class="fa-solid fa-plus" aria-hidden="true"></i></a>
+          </aside>
+          <div class="cfm-hero__media" data-aos="fade-left" data-aos-delay="200" data-aos-duration="900">
+            <img src="assets/images/menu.webp"
+              alt="Three espresso portafilters filled with different roasts" width="474" height="710"
+              data-cfm-parallax="0.08:34">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ESPRESSO CLASSICS -->
+    <section class="cf-sec cf-sec--cream cfm-sec cfm-classics">
+      <span class="cfm-anchor" id="espresso"></span>
+      <div class="cf-wrap">
+        <div class="cfm-head">
+          <div class="cfm-head__title-group">
+            <p class="cf-kicker cfm-head__kicker" data-aos="fade-right">Artisan Brews</p>
+            <h2 class="cf-display cf-h2 cf-h2--sm cfm-head__title" data-aos="fade-right" data-aos-delay="80">Espresso <em>classics</em></h2>
+          </div>
+          <div class="cfm-head__note-wrap" data-aos="fade-left" data-aos-delay="140">
+            <p class="cfm-note">The foundation of everything we pour. Short, balanced and made to order from our house blend.</p>
+          </div>
+        </div>
+        <div class="cfm-grid">
+          <div class="cfm-row cfm-row--a">
+            <article class="cfm-card cfm-card--a" data-aos="fade-up">
+              <figure class="cfm-card__media">
+                <a href="404.html" aria-label="Order Classic Espresso">
+                  <img src="assets/images/image-4.webp" alt="Classic espresso in a glass cup" width="435" height="312" loading="lazy">
+                </a>
+              </figure>
+              <div class="cfm-card__body">
+                <div class="cfm-card__text">
+                  <h3 class="cf-display cf-h3"><a href="404.html" class="cfm-card__link">Classic Espresso</a></h3>
+                  <p>Rich, syrupy and bright. Our house blend, pulled short and sweet.</p>
+                </div>
+                <div class="cfm-card__foot">
+                  <span class="cf-display cfm-price">$5.25</span>
+                  <a href="404.html" class="cfm-add" aria-label="Add Classic Espresso to your order">
+                    <i class="fa-solid fa-plus" aria-hidden="true"></i>
+                  </a>
+                </div>
+              </div>
+            </article>
+            <article class="cfm-card" data-aos="fade-up" data-aos-delay="120">
+              <figure class="cfm-card__media">
+                <a href="404.html" aria-label="Order Flat White">
+                  <img src="assets/images/image-3.webp" alt="Flat white with leaf latte art on a wooden table" width="795" height="312" loading="lazy">
+                </a>
+              </figure>
+              <div class="cfm-card__body">
+                <div class="cfm-card__text">
+                  <h3 class="cf-display cf-h3"><a href="404.html" class="cfm-card__link">Flat White</a></h3>
+                  <p>Velvety microfoam over a double ristretto, naturally sweet and smooth from first sip to last.</p>
+                </div>
+                <div class="cfm-card__foot">
+                  <span class="cf-display cfm-price">$5.25</span>
+                  <a href="404.html" class="cfm-add" aria-label="Add Flat White to your order">
+                    <i class="fa-solid fa-plus" aria-hidden="true"></i>
+                  </a>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="cfm-row cfm-row--b">
+            <article class="cfm-card" data-aos="fade-up">
+              <figure class="cfm-card__media">
+                <a href="404.html" aria-label="Order Cortado">
+                  <img src="assets/images/midnight.webp" alt="Cortado in a small glass with heart latte art" width="623" height="312" loading="lazy">
+                </a>
+              </figure>
+              <div class="cfm-card__body">
+                <div class="cfm-card__text">
+                  <h3 class="cf-display cf-h3"><a href="404.html" class="cfm-card__link">Cortado</a></h3>
+                  <p>Equal parts espresso and warm milk for a balanced, silky sip.</p>
+                </div>
+                <div class="cfm-card__foot">
+                  <span class="cf-display cfm-price">$5.25</span>
+                  <a href="404.html" class="cfm-add" aria-label="Add Cortado to your order">
+                    <i class="fa-solid fa-plus" aria-hidden="true"></i>
+                  </a>
+                </div>
+              </div>
+            </article>
+            <article class="cfm-card" data-aos="fade-up" data-aos-delay="120">
+              <figure class="cfm-card__media">
+                <a href="404.html" aria-label="Order Cappuccino">
+                  <img src="assets/images/image-2.webp" alt="Cappuccino in a black cup with airy foam" width="623" height="312" loading="lazy">
+                </a>
+              </figure>
+              <div class="cfm-card__body">
+                <div class="cfm-card__text">
+                  <h3 class="cf-display cf-h3"><a href="404.html" class="cfm-card__link">Cappuccino</a></h3>
+                  <p>Thick, airy foam with a cocoa-dusted finish.</p>
+                </div>
+                <div class="cfm-card__foot">
+                  <span class="cf-display cfm-price">$5.25</span>
+                  <a href="404.html" class="cfm-add" aria-label="Add Cappuccino to your order">
+                    <i class="fa-solid fa-plus" aria-hidden="true"></i>
+                  </a>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="cfm-row">
+            <article class="cfm-card" data-aos="fade-up">
+              <figure class="cfm-card__media">
+                <a href="404.html" aria-label="Order Americano">
+                  <img src="assets/images/image-1.webp" alt="Close-up of an americano with golden crema" width="1290" height="312" loading="lazy">
+                </a>
+              </figure>
+              <div class="cfm-card__body">
+                <div class="cfm-card__text">
+                  <h3 class="cf-display cf-h3"><a href="404.html" class="cfm-card__link">Americano</a></h3>
+                  <p>Long and clean: espresso lengthened with hot water. 
+                    A smooth, balanced cup with a rich aroma and a gentle finish.</p>
+                </div>
+                <div class="cfm-card__foot">
+                  <span class="cf-display cfm-price">$5.25</span>
+                  <a href="404.html" class="cfm-add" aria-label="Add Americano to your order">
+                    <i class="fa-solid fa-plus" aria-hidden="true"></i>
+                  </a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COLD, CLEAR & REFRESHING -->
+    <section class="cf-sec cf-sec--dark cfm-cold">
+      <div class="cf-wrap">
+        <div class="cfm-head">
+          <div class="cfm-head__title-group">
+            <p class="cf-kicker cfm-head__kicker" data-aos="fade-right">Chilled &amp; Slow-Steeped</p>
+            <h2 class="cf-display cf-h2 cf-h2--sm cf-h2--light cfm-head__title" data-aos="fade-right" data-aos-delay="80">Cold, clear &amp; <em>refreshing</em></h2>
+          </div>
+          <div class="cfm-head__note-wrap" data-aos="fade-left" data-aos-delay="140">
+            <p class="cfm-note">Slow-steeped cold brew and bright, fizzy pours, built for warm afternoons and long walks.</p>
+          </div>
+        </div>
+        <div class="cfm-cold__row">
+          <figure class="cfm-cold__media" data-aos="fade-up" data-aos-duration="900">
+            <a href="404.html" aria-label="Explore Cold Brews">
+              <img src="assets/images/pour.webp" alt="Glossy iced latte with coffee and chocolate splash" width="494"
+                height="660" loading="lazy">
+            </a>
+          </figure>
+          <ul class="cfm-list">
+            <li class="cfm-item" data-aos="fade-left">
+              <div class="cfm-item__top">
+                <div class="cfm-item__title-wrap">
+                  <h3 class="cf-display cf-h3 cfm-item__title"><a href="404.html" class="cfm-card__link">Classic Cold Brew</a></h3>
+                  <span class="cfm-item__tag">18-Hour Steep</span>
+                </div>
+                <span class="cf-display cfm-item__price">₹240</span>
+              </div>
+              <div class="cfm-item__bot">
+                <p>Slow-steeped and smooth with low acidity, poured over clear ice.</p>
+                <button type="button" class="cf-btn cfm-btn--add" data-add data-id="classic-cold-brew" data-name="Classic Cold Brew">
+                  <i class="fa-solid fa-plus" aria-hidden="true"></i>
+                  <span class="cfm-btn__label">Add</span>
+                </button>
+              </div>
+            </li>
+            <li class="cfm-item" data-aos="fade-left" data-aos-delay="100">
+              <div class="cfm-item__top">
+                <div class="cfm-item__title-wrap">
+                  <h3 class="cf-display cf-h3 cfm-item__title"><a href="404.html" class="cfm-card__link">Iced Latte</a></h3>
+                  <span class="cfm-item__tag">Double Ristretto</span>
+                </div>
+                <span class="cf-display cfm-item__price">₹240</span>
+              </div>
+              <div class="cfm-item__bot">
+                <p>A double espresso poured over cold milk and artisanal ice cubes.</p>
+                <button type="button" class="cf-btn cfm-btn--add" data-add data-id="iced-latte" data-name="Iced Latte">
+                  <i class="fa-solid fa-plus" aria-hidden="true"></i>
+                  <span class="cfm-btn__label">Add</span>
+                </button>
+              </div>
+            </li>
+            <li class="cfm-item" data-aos="fade-left" data-aos-delay="200">
+              <div class="cfm-item__top">
+                <div class="cfm-item__title-wrap">
+                  <h3 class="cf-display cf-h3 cfm-item__title"><a href="404.html" class="cfm-card__link">Vanilla Sweet Cream Cold Brew</a></h3>
+                  <span class="cfm-item__tag">House Cream Float</span>
+                </div>
+                <span class="cf-display cfm-item__price">₹240</span>
+              </div>
+              <div class="cfm-item__bot">
+                <p>Cold brew crowned with a cloud of vanilla-whipped velvet cream.</p>
+                <button type="button" class="cf-btn cfm-btn--add" data-add data-id="vanilla-cold-brew" data-name="Vanilla Sweet Cream Cold Brew">
+                  <i class="fa-solid fa-plus" aria-hidden="true"></i>
+                  <span class="cfm-btn__label">Add</span>
+                </button>
+              </div>
+            </li>
+            <li class="cfm-item" data-aos="fade-left" data-aos-delay="300">
+              <div class="cfm-item__top">
+                <div class="cfm-item__title-wrap">
+                  <h3 class="cf-display cf-h3 cfm-item__title"><a href="404.html" class="cfm-card__link">Espresso Tonic</a></h3>
+                  <span class="cfm-item__tag">Fizzy &amp; Citrus</span>
+                </div>
+                <span class="cf-display cfm-item__price">₹240</span>
+              </div>
+              <div class="cfm-item__bot">
+                <p>Bright and fizzy: tonic, espresso and a fragrant twist of orange peel.</p>
+                <button type="button" class="cf-btn cfm-btn--add" data-add data-id="espresso-tonic" data-name="Espresso Tonic">
+                  <i class="fa-solid fa-plus" aria-hidden="true"></i>
+                  <span class="cfm-btn__label">Add</span>
+                </button>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- PHILOSOPHY -->
+    <section class="cf-sec cf-sec--tan cf-phil-sec cfm-phil" id="Origins">
+      <div class="cf-wrap">
+        <div class="cfm-head cfm-phil__head">
+          <div class="cfm-head__title-group" data-aos="fade-right">
+            <p class="cf-kicker cfm-head__kicker">Our Philosophy</p>
+            <h2 class="cf-display cf-h2 cf-h2--dark cfm-head__title cfm-phil__heading">
+              Coffee isn&#8217;t a rush.<br>It&#8217;s a ritual, <em>left to bloom.</em>
+            </h2>
+          </div>
+          <div class="cfm-head__note-wrap cfm-phil__note-wrap" data-aos="fade-left" data-aos-delay="140">
+            <p class="cfm-note">Behind every extraction lies an unhurried devotion to craft, direct trade origins, and the quiet beauty of slowing down.</p>
+          </div>
+        </div>        <div class="cf-phil__layout">
+          <div class="cf-phil__left">
+            <div class="cf-phil__items">
+              <div class="cf-pri" data-aos="fade-up">
+                <div class="cf-pri__body">
+                  <h3 class="cf-display cf-h3">Sourced with respect</h3>
+                  <p>We work with growers we know by name, and pay for quality — not just volume.</p>
+                </div>
+              </div>
+              <div class="cf-pri" data-aos="fade-up" data-aos-delay="120">
+                <div class="cf-pri__body">
+                  <h3 class="cf-display cf-h3">Roasted with patience</h3>
+                  <p>Small batches, roasted to bring out sweetness rather than smoke.</p>
+                </div>
+              </div>
+              <div class="cf-pri" data-aos="fade-up" data-aos-delay="240">
+                <div class="cf-pri__body">
+                  <h3 class="cf-display cf-h3">Poured with care</h3>
+                  <p>Every cup is weighed, timed and tasted before it reaches you.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="cf-phil__art" data-aos="zoom-in" data-aos-delay="200" data-aos-duration="1000">
+            <img class="cf-splash" src="assets/images/splash.webp" alt="" loading="lazy">
+            <img class="cf-overhead" src="assets/images/latte-overhead.webp" alt="Overhead view of a latte art cup"
+              loading="lazy">
+            <img class="cf-badge-art" src="assets/images/badge.webp" alt="" width="164" height="164">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SIGNATURE SPECIALS -->
+    <section class="cf-sec cfm-specials" id="specials" aria-labelledby="cfmSpecialsTitle">
+      <div class="cf-wrap">
+        <div class="cfm-head cfm-specials__head">
+          <div class="cfm-head__title-group">
+            <p class="cf-kicker cfm-specials__kicker" data-aos="fade-right">Chef's Selection</p>
+            <h2 class="cf-display cf-h2 cfm-specials__title" id="cfmSpecialsTitle" data-aos="fade-right"
+              data-aos-delay="80">Our Signature<br>Coffee Specials <em>Collection</em></h2>
+          </div>
+          <div class="cfm-head__note-wrap" data-aos="fade-left" data-aos-delay="120">
+            <p class="cfm-note cfm-specials__note">Our baristas push the craft further — layering unexpected flavours, textures and aromas into drinks you won't find on any other menu.</p>
+          </div>
+        </div>
+
+        <div class="cfm-specials__track-wrap" data-aos="fade-up" data-aos-delay="100">
+          <div class="cfm-specials__track" id="cfmSpecialsTrack">
+
+            <!-- Card 1 -->
+            <article class="cfm-sp-card" style="--sp-hue:30">
+              <div class="cfm-sp-card__glow"></div>
+              <div class="cfm-sp-card__img-wrap">
+                <img src="assets/images/caramel-latte.webp" alt="Caramel Latte with salted caramel drizzle" width="320"
+                  height="200" loading="lazy">
+                <span class="cfm-sp-badge">Seasonal</span>
+              </div>
+              <div class="cfm-sp-card__body">
+                <h3 class="cf-display cfm-sp-card__name">Salted Caramel Cloud</h3>
+                <p class="cfm-sp-card__desc">Espresso, house caramel, oat milk foam and a pinch of Himalayan salt —
+                  warmth in every sip.</p>
+                <div class="cfm-sp-card__foot">
+                  <span class="cf-display cfm-sp-card__price">₹320</span>
+                  <div class="cfm-sp-tags">
+                    <span>Sweet</span><span>Warm</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Card 2 -->
+            <article class="cfm-sp-card" style="--sp-hue:195">
+              <div class="cfm-sp-card__glow"></div>
+              <div class="cfm-sp-card__img-wrap">
+                <img src="assets/images/midnight.webp" alt="Midnight Blue Latte in a dark cup" width="320" height="200"
+                  loading="lazy">
+                <span class="cfm-sp-badge cfm-sp-badge--blue">New</span>
+              </div>
+              <div class="cfm-sp-card__body">
+                <h3 class="cf-display cfm-sp-card__name">Midnight Blue Latte</h3>
+                <p class="cfm-sp-card__desc">Butterfly pea flower cold brew, coconut milk and a double ristretto poured
+                  at the table — watch the hue shift.</p>
+                <div class="cfm-sp-card__foot">
+                  <span class="cf-display cfm-sp-card__price">₹380</span>
+                  <div class="cfm-sp-tags">
+                    <span>Floral</span><span>Iced</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Card 3 -->
+            <article class="cfm-sp-card" style="--sp-hue:90">
+              <div class="cfm-sp-card__glow"></div>
+              <div class="cfm-sp-card__img-wrap">
+                <img src="assets/images/cup-sage.webp" alt="Sage & Honey Latte in a ceramic cup" width="320" height="200"
+                  loading="lazy">
+                <span class="cfm-sp-badge cfm-sp-badge--green">Limited</span>
+              </div>
+              <div class="cfm-sp-card__body">
+                <h3 class="cf-display cfm-sp-card__name">Sage & Honey Latte</h3>
+                <p class="cfm-sp-card__desc">Warm sage-infused milk, raw wildflower honey and a single-origin espresso.
+                  Earthy, aromatic, grounding.</p>
+                <div class="cfm-sp-card__foot">
+                  <span class="cf-display cfm-sp-card__price">₹350</span>
+                  <div class="cfm-sp-tags">
+                    <span>Earthy</span><span>Herbal</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Card 4 -->
+            <article class="cfm-sp-card" style="--sp-hue:340">
+              <div class="cfm-sp-card__glow"></div>
+              <div class="cfm-sp-card__img-wrap">
+                <img src="assets/images/cup-cortado.webp" alt="Rose Cortado in a glass" width="320" height="200"
+                  loading="lazy">
+                <span class="cfm-sp-badge cfm-sp-badge--rose">Popular</span>
+              </div>
+              <div class="cfm-sp-card__body">
+                <h3 class="cf-display cfm-sp-card__name">Rose Cardamom Cortado</h3>
+                <p class="cfm-sp-card__desc">Ristretto over warm rose-cardamom milk with edible petal garnish. Delicate,
+                  exotic, perfectly balanced.</p>
+                <div class="cfm-sp-card__foot">
+                  <span class="cf-display cfm-sp-card__price">₹360</span>
+                  <div class="cfm-sp-tags">
+                    <span>Spiced</span><span>Floral</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Card 5 -->
+            <article class="cfm-sp-card" style="--sp-hue:55">
+              <div class="cfm-sp-card__glow"></div>
+              <div class="cfm-sp-card__img-wrap">
+                <img src="assets/images/hazelnut.webp" alt="Hazelnut Mocha in a tall glass" width="320" height="200"
+                  loading="lazy">
+                <span class="cfm-sp-badge">Signature</span>
+              </div>
+              <div class="cfm-sp-card__body">
+                <h3 class="cf-display cfm-sp-card__name">Hazelnut Dark Mocha</h3>
+                <p class="cfm-sp-card__desc">70% dark chocolate ganache, house hazelnut syrup and a long espresso pull.
+                  Rich, decadent and unapologetic.</p>
+                <div class="cfm-sp-card__foot">
+                  <span class="cf-display cfm-sp-card__price">₹340</span>
+                  <div class="cfm-sp-tags">
+                    <span>Rich</span><span>Chocolatey</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BREW YOUR WAY -->
+    <section class="cf-sec cf-sec--cream cfm-brew" id="brew-your-way" aria-labelledby="cfmBrewTitle">
+      <div class="cf-wrap">
+        <div class="cfm-head cfm-brew__top">
+          <div class="cfm-head__title-group" data-aos="fade-right">
+            <p class="cf-kicker cfm-brew__kicker">Find your method</p>
+            <h2 class="cf-display cf-h2 cf-h2--sm cfm-brew__title" id="cfmBrewTitle">Brew Your Way<br>Your Perfectly<em>
+              Crafted Coffee</em></h2>
+          </div>
+          <div class="cfm-head__note-wrap" data-aos="fade-left" data-aos-delay="100">
+            <p class="cfm-note cfm-brew__note">Every method tells a different story. Pick a style — we'll show you what it unlocks.</p>
+          </div>
+        </div>
+
+        <div class="cfm-brew__layout" data-aos="fade-up" data-aos-delay="80">
+          <!-- Tab bar -->
+          <div class="cfm-brew__tabs" role="tablist" aria-label="Brewing methods" id="cfmBrewTabs">
+            <button class="cfm-brew__tab is-active" role="tab" aria-selected="true"
+              aria-controls="cfmBrewPanel-espresso" id="cfmBrewTab-espresso" data-brew="espresso">
+              <span class="cfm-brew__tab-icon"><i class="fa-solid fa-mug-hot" aria-hidden="true"></i></span>
+              <span class="cfm-brew__tab-label">Espresso</span>
+            </button>
+            <button class="cfm-brew__tab" role="tab" aria-selected="false" aria-controls="cfmBrewPanel-pour"
+              id="cfmBrewTab-pour" data-brew="pour">
+              <span class="cfm-brew__tab-icon"><i class="fa-solid fa-droplet" aria-hidden="true"></i></span>
+              <span class="cfm-brew__tab-label">Pour Over</span>
+            </button>
+            <button class="cfm-brew__tab" role="tab" aria-selected="false" aria-controls="cfmBrewPanel-cold"
+              id="cfmBrewTab-cold" data-brew="cold">
+              <span class="cfm-brew__tab-icon"><i class="fa-regular fa-snowflake" aria-hidden="true"></i></span>
+              <span class="cfm-brew__tab-label">Cold Brew</span>
+            </button>
+            <button class="cfm-brew__tab" role="tab" aria-selected="false" aria-controls="cfmBrewPanel-french"
+              id="cfmBrewTab-french" data-brew="french">
+              <span class="cfm-brew__tab-icon"><i class="fa-solid fa-circle" aria-hidden="true"></i></span>
+              <span class="cfm-brew__tab-label">French Press</span>
+            </button>
+          </div>
+
+          <!-- Panels -->
+          <div class="cfm-brew__panels">
+
+            <div class="cfm-brew__panel is-active" role="tabpanel" id="cfmBrewPanel-espresso"
+              aria-labelledby="cfmBrewTab-espresso">
+              <div class="cfm-brew__panel-media">
+                <img src="assets/images/expresso.webp" alt="Espresso being extracted" width="520" height="400"
+                  loading="lazy">
+                <div class="cfm-brew__panel-badge">
+                  <span class="cfm-brew__panel-badge-val">9 bar</span>
+                  <span class="cfm-brew__panel-badge-lbl">Pressure</span>
+                </div>
+              </div>
+              <div class="cfm-brew__panel-info">
+                <div class="cfm-brew__panel-meta">
+                  <span class="cfm-brew__meta-chip"><i class="fa-solid fa-stopwatch" aria-hidden="true"></i> 25–30
+                    sec</span>
+                  <span class="cfm-brew__meta-chip"><i class="fa-solid fa-temperature-high" aria-hidden="true"></i> 93
+                    °C</span>
+                  <span class="cfm-brew__meta-chip"><i class="fa-solid fa-weight-hanging" aria-hidden="true"></i> 18–20
+                    g</span>
+                </div>
+                <h3 class="cf-display cfm-brew__panel-title">The Espresso Method</h3>
+                <p class="cfm-brew__panel-desc">Pressurised hot water extracts finely ground coffee into a rich,
+                   concentrated shot with caramel sweetness, a syrupy body, and golden crema.</p>
+                <div class="cfm-brew__flavour">
+                  <p class="cfm-brew__flavour-lbl">Flavour profile</p>
+                  <div class="cfm-brew__bars">
+                    <div class="cfm-brew__bar-row"><span>Intensity</span>
+                      <div class="cfm-brew__bar">
+                        <div class="cfm-brew__bar-fill" style="--w:90%"></div>
+                      </div>
+                    </div>
+                    <div class="cfm-brew__bar-row"><span>Acidity</span>
+                      <div class="cfm-brew__bar">
+                        <div class="cfm-brew__bar-fill" style="--w:55%"></div>
+                      </div>
+                    </div>
+                    <div class="cfm-brew__bar-row"><span>Sweetness</span>
+                      <div class="cfm-brew__bar">
+                        <div class="cfm-brew__bar-fill" style="--w:65%"></div>
+                      </div>
+                    </div>
+                    <div class="cfm-brew__bar-row"><span>Body</span>
+                      <div class="cfm-brew__bar">
+                        <div class="cfm-brew__bar-fill" style="--w:95%"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <a href="404.html" class="cf-btn cfm-brew__panel-cta">Explore espresso drinks <span
+                    class="cf-btn__icon"><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span></a>
+              </div>
+            </div>
+
+            <div class="cfm-brew__panel" role="tabpanel" id="cfmBrewPanel-pour" aria-labelledby="cfmBrewTab-pour"
+              hidden>
+              <div class="cfm-brew__panel-media">
+                <img src="assets/images/pour-over.webp" alt="Pour over coffee being brewed" width="520" height="400"
+                  loading="lazy">
+                <div class="cfm-brew__panel-badge">
+                  <span class="cfm-brew__panel-badge-val">4 min</span>
+                  <span class="cfm-brew__panel-badge-lbl">Brew Time</span>
+                </div>
+              </div>
+              <div class="cfm-brew__panel-info">
+                <div class="cfm-brew__panel-meta">
+                  <span class="cfm-brew__meta-chip"><i class="fa-solid fa-stopwatch" aria-hidden="true"></i> 3–5
+                    min</span>
+                  <span class="cfm-brew__meta-chip"><i class="fa-solid fa-temperature-high" aria-hidden="true"></i> 96
+                    °C</span>
+                  <span class="cfm-brew__meta-chip"><i class="fa-solid fa-weight-hanging" aria-hidden="true"></i> 22–25
+                    g</span>
+                </div>
+                <h3 class="cf-display cfm-brew__panel-title">The Pour Over Method</h3>
+                <p class="cfm-brew__panel-desc">Slowly poured water passes through a paper filter, 
+                  revealing the clean, delicate floral and fruity notes of single-origin coffee.</p>
+                <div class="cfm-brew__flavour">
+                  <p class="cfm-brew__flavour-lbl">Flavour profile</p>
+                  <div class="cfm-brew__bars">
+                    <div class="cfm-brew__bar-row"><span>Intensity</span>
+                      <div class="cfm-brew__bar">
+                        <div class="cfm-brew__bar-fill" style="--w:45%"></div>
+                      </div>
+                    </div>
+                    <div class="cfm-brew__bar-row"><span>Acidity</span>
+                      <div class="cfm-brew__bar">
+                        <div class="cfm-brew__bar-fill" style="--w:80%"></div>
+                      </div>
+                    </div>
+                    <div class="cfm-brew__bar-row"><span>Sweetness</span>
+                      <div class="cfm-brew__bar">
+                        <div class="cfm-brew__bar-fill" style="--w:75%"></div>
+                      </div>
+                    </div>
+                    <div class="cfm-brew__bar-row"><span>Body</span>
+                      <div class="cfm-brew__bar">
+                        <div class="cfm-brew__bar-fill" style="--w:40%"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <a href="404.html" class="cf-btn cfm-brew__panel-cta">Order a pour over <span class="cf-btn__icon"><i
+                      class="fa-solid fa-arrow-right" aria-hidden="true"></i></span></a>
+              </div>
+            </div>
+
+            <div class="cfm-brew__panel" role="tabpanel" id="cfmBrewPanel-cold" aria-labelledby="cfmBrewTab-cold"
+              hidden>
+              <div class="cfm-brew__panel-media">
+                <img src="assets/images/brew.webp" alt="Cold brew being poured over ice" width="520" height="400"
+                  loading="lazy">
+                <div class="cfm-brew__panel-badge">
+                  <span class="cfm-brew__panel-badge-val">18 hr</span>
+                  <span class="cfm-brew__panel-badge-lbl">Steep Time</span>
+                </div>
+              </div>
+              <div class="cfm-brew__panel-info">
+                <div class="cfm-brew__panel-meta">
+                  <span class="cfm-brew__meta-chip"><i class="fa-solid fa-stopwatch" aria-hidden="true"></i> 12–20
+                    hr</span>
+                  <span class="cfm-brew__meta-chip"><i class="fa-solid fa-temperature-low" aria-hidden="true"></i> 4
+                    °C</span>
+                  <span class="cfm-brew__meta-chip"><i class="fa-solid fa-weight-hanging" aria-hidden="true"></i> 80–100
+                    g</span>
+                </div>
+                <h3 class="cf-display cfm-brew__panel-title">The Cold Brew Method</h3>
+                <p class="cfm-brew__panel-desc">Coffee steeped in cold water for up to 20 hours, 
+                  creating a naturally sweeter, smoother concentrate with less bitterness 
+                  and up to twice the strength.</p>
+                <div class="cfm-brew__flavour">
+                  <p class="cfm-brew__flavour-lbl">Flavour profile</p>
+                  <div class="cfm-brew__bars">
+                    <div class="cfm-brew__bar-row"><span>Intensity</span>
+                      <div class="cfm-brew__bar">
+                        <div class="cfm-brew__bar-fill" style="--w:75%"></div>
+                      </div>
+                    </div>
+                    <div class="cfm-brew__bar-row"><span>Acidity</span>
+                      <div class="cfm-brew__bar">
+                        <div class="cfm-brew__bar-fill" style="--w:25%"></div>
+                      </div>
+                    </div>
+                    <div class="cfm-brew__bar-row"><span>Sweetness</span>
+                      <div class="cfm-brew__bar">
+                        <div class="cfm-brew__bar-fill" style="--w:85%"></div>
+                      </div>
+                    </div>
+                    <div class="cfm-brew__bar-row"><span>Body</span>
+                      <div class="cfm-brew__bar">
+                        <div class="cfm-brew__bar-fill" style="--w:70%"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <a href="404.html" class="cf-btn cfm-brew__panel-cta">See cold drinks <span class="cf-btn__icon"><i
+                      class="fa-solid fa-arrow-right" aria-hidden="true"></i></span></a>
+              </div>
+            </div>
+
+            <div class="cfm-brew__panel" role="tabpanel" id="cfmBrewPanel-french" aria-labelledby="cfmBrewTab-french"
+              hidden>
+              <div class="cfm-brew__panel-media">
+                <img src="assets/images/french.webp" alt="French press coffee on a wooden table" width="520" height="400"
+                  loading="lazy">
+                <div class="cfm-brew__panel-badge">
+                  <span class="cfm-brew__panel-badge-val">Full</span>
+                  <span class="cfm-brew__panel-badge-lbl">Immersion</span>
+                </div>
+              </div>
+              <div class="cfm-brew__panel-info">
+                <div class="cfm-brew__panel-meta">
+                  <span class="cfm-brew__meta-chip"><i class="fa-solid fa-stopwatch" aria-hidden="true"></i> 4–5
+                    min</span>
+                  <span class="cfm-brew__meta-chip"><i class="fa-solid fa-temperature-high" aria-hidden="true"></i> 94
+                    °C</span>
+                  <span class="cfm-brew__meta-chip"><i class="fa-solid fa-weight-hanging" aria-hidden="true"></i> 30–35
+                    g</span>
+                </div>
+                <h3 class="cf-display cfm-brew__panel-title">The French Press Method</h3>
+                <p class="cfm-brew__panel-desc">Coarsely ground coffee steeped and pressed through a metal plunger, 
+                  preserving natural oils for a rich, full-bodied brew.</p>
+                <div class="cfm-brew__flavour">
+                  <p class="cfm-brew__flavour-lbl">Flavour profile</p>
+                  <div class="cfm-brew__bars">
+                    <div class="cfm-brew__bar-row"><span>Intensity</span>
+                      <div class="cfm-brew__bar">
+                        <div class="cfm-brew__bar-fill" style="--w:70%"></div>
+                      </div>
+                    </div>
+                    <div class="cfm-brew__bar-row"><span>Acidity</span>
+                      <div class="cfm-brew__bar">
+                        <div class="cfm-brew__bar-fill" style="--w:40%"></div>
+                      </div>
+                    </div>
+                    <div class="cfm-brew__bar-row"><span>Sweetness</span>
+                      <div class="cfm-brew__bar">
+                        <div class="cfm-brew__bar-fill" style="--w:55%"></div>
+                      </div>
+                    </div>
+                    <div class="cfm-brew__bar-row"><span>Body</span>
+                      <div class="cfm-brew__bar">
+                        <div class="cfm-brew__bar-fill" style="--w:90%"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <a href="404.html" class="cf-btn cfm-brew__panel-cta">Order french press <span class="cf-btn__icon"><i
+                      class="fa-solid fa-arrow-right" aria-hidden="true"></i></span></a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cfm-cta" aria-labelledby="cfmCtaTitle">
+      <div class="cfm-cta__inner">
+        <h2 class="cfm-cta__title" id="cfmCtaTitle" data-aos="fade-up">Your Brew. Ready When<br>You Are.</h2>
+        <p class="cfm-cta__lead" data-aos="fade-up" data-aos-delay="80">
+          Build your order in a minute, pick a time and collect it fresh at the counter.
+          Your <span id="cfmSavedCount">0</span> saved item(s) will be waiting.
+        </p>
+        <div class="cfm-cta__actions" data-aos="fade-up" data-aos-delay="160">
+          <a href="404.html" class="cf-btn">Start your order <span class="cf-btn__icon"><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span></a>
+          <a href="contact.html" class="cf-cta__ghost">Contact Us <i class="fa-solid fa-envelope" aria-hidden="true"></i></a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <p class="cfm-sr" id="cfmLive" aria-live="polite"></p>
+
+  <!-- FOOTER -->
+  <footer class="cf-footer" id="contact">
+    <div class="cf-wrap">
+      <div class="cf-fcta" data-aos="fade-up">
+        <h3 class="cf-display">Got Event in Mind?<br>Let’s collaborate.</h3>
+        <form class="cf-form" id="cfForm" novalidate>
+          <input type="email" placeholder="Enter your email" aria-label="Email address" required>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+
+      <div class="cf-fgrid">
+        <div class="cf-fcol cf-fcol--brand" data-aos="fade-up">
+          <a href="menu.html" class="cf-logo cf-logo--footer" aria-label="Stackly home"><img
+              src="assets/images/stackly-logo.webp" alt="Stackly"></a>
+          <p>Small-batch coffee roasters. Sourced with respect, roasted with patience, served with a smile.</p>
+          <h4>Follow us</h4>
+          <div class="cf-social">
+            <a href="404.html" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+            <a href="404.html" aria-label="X (Twitter)"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a>
+            <a href="404.html" aria-label="Facebook"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
+            <a href="404.html" aria-label="YouTube"><i class="fa-brands fa-youtube" aria-hidden="true"></i></a>
+          </div>
+        </div>
+        <nav class="cf-fcol" data-aos="fade-up" data-aos-delay="100" aria-label="Footer">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="origins.html">Origins</a></li>
+            <li><a href="experience.html">Experience</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="cf-fcol" data-aos="fade-up" data-aos-delay="200">
+          <h4>Opening hours</h4>
+          <ul class="cf-fhours">
+            <li><b>Monday – Friday</b>7:00 am – 8:00 pm</li>
+            <li><b>Saturday</b>8:00 am – 9:00 pm</li>
+            <li><b>Sunday</b>10:00 am – 6:00 pm</li>
+          </ul>
+        </div>
+        <div class="cf-fcol cf-fcol--contact" data-aos="fade-up" data-aos-delay="300">
+          <h4>Contact us</h4>
+          <ul class="cf-fcontact">
+            <li><i class="fa-solid fa-phone" aria-hidden="true"></i><a href="404.html">+91 9876543210</a>
+            </li>
+            <li><i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+              <address>Salem, Tamil Nadu, India.</address>
+            </li>
+            <li><i class="fa-solid fa-envelope" aria-hidden="true"></i><a href="mailto:404.html">info@stackly.com</a>
+            </li>
+            <li><i class="fa-solid fa-mobile-screen-button" aria-hidden="true"></i><a href="404.html">+91 98765
+                43210</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="cf-fbar" data-aos="fade-up" data-aos-delay="100">
+        <p>© 2026 Stackly. All rights reserved.</p>
+        <a href="menu.html" class="cf-top">Back to top <span><i class="fa-solid fa-arrow-up"
+              aria-hidden="true"></i></span></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js" crossorigin="anonymous"
+    referrerpolicy="no-referrer"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.3.11/dist/lenis.min.js" crossorigin="anonymous"
+    referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" crossorigin="anonymous"
+    referrerpolicy="no-referrer"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/menu.js"></script>
+</body>
+
+</html>

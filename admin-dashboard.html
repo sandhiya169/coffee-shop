@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Overview | Stackly Admin Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Zen+Maru+Gothic:wght@400;500;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/dashboard.css">
+</head>
+
+<body class="cf cf-db" data-role="admin">
+  <script>document.documentElement.classList.add('js')</script>
+  <a class="db-skip" href="#dbView">Skip to content</a>
+
+  <div class="db">
+    <!-- SIDEBAR -->
+    <aside class="db-side" id="dbSide" aria-label="Dashboard sidebar">
+      <a href="admin-dashboard.html" class="cf-logo db-side__logo"><img src="assets/images/stackly-logo.webp"
+          alt="Stackly" width="158" height="65"></a>
+
+      <div class="db-side__who">
+        <span class="db-user__av" data-db-initial aria-hidden="true">G</span>
+        <span><small>Admin account</small><b data-db-email>guest@stackly.com</b></span>
+      </div>
+
+      <nav class="db-nav" aria-label="Admin menu">
+        <a href="#overview" data-panel="overview" class="is-active" aria-current="page"><i
+            class="fa-solid fa-chart-line" aria-hidden="true"></i>Overview</a>
+        <a href="#orders" data-panel="orders"><i class="fa-solid fa-receipt" aria-hidden="true"></i>Orders</a>
+        <a href="#stock" data-panel="stock" data-title="Menu &amp; Stock"><i class="fa-solid fa-boxes-stacked"
+            aria-hidden="true"></i>Menu &amp; Stock</a>
+        <a href="#customers" data-panel="customers"><i class="fa-solid fa-users" aria-hidden="true"></i>Customers</a>
+      </nav>
+
+      <div class="db-side__foot">
+        <a href="index.html" class="db-btn"><i class="fa-solid fa-house" aria-hidden="true"></i>Back to Home</a>
+        <a href="login.html" class="db-btn db-btn--ghost" data-db-logout><i class="fa-solid fa-arrow-right-from-bracket"
+            aria-hidden="true"></i>Logout</a>
+      </div>
+    </aside>
+    <div class="db-scrim" id="dbScrim"></div>
+
+    <!-- MAIN -->
+    <div class="db-main">
+      <header class="db-top">
+        <button class="db-burger" id="dbBurger" type="button" aria-label="Open menu" aria-expanded="false"
+          aria-controls="dbSide"><span></span></button>
+        <h1 class="cf-display db-top__title" id="dbTitle" aria-live="polite">Overview</h1>
+        <a href="404.html" class="db-iconbtn" aria-label="Notifications"><i class="fa-regular fa-bell"
+            aria-hidden="true"></i></a>
+        <div class="db-user" title="guest@stackly.com">
+          <span class="db-user__av" data-db-initial aria-hidden="true">G</span>
+          <span class="db-user__txt"><small>Admin</small><b data-db-email>guest@stackly.com</b></span>
+        </div>
+      </header>
+
+      <main class="db-view" id="dbView">
+
+        <!-- ============ OVERVIEW ============ -->
+        <div class="db-panel is-on" id="overview">
+          <div class="db-ph">
+            <h2 class="cf-display">Today at the counter</h2>
+            <p>Sales, orders and the live queue for 24 Roastery Lane, updated through the day.</p>
+          </div>
+
+          <section class="db-sec" aria-labelledby="ao1">
+            <div class="db-sec__h">
+              <h3 class="cf-display" id="ao1">Today so far</h3>
+              <a href="404.html" class="cf-link">Download day report</a>
+            </div>
+            <div class="db-stats">
+              <div class="db-stat db-stat--brown"><b>₹48,620</b><span>Revenue today</span><em class="db-up"
+                  style="color:var(--cf-gold)">12% up on last Friday</em></div>
+              <div class="db-stat"><b>214</b><span>Orders placed</span><em class="db-up">9% up on last Friday</em></div>
+              <div class="db-stat"><b>₹227</b><span>Average order</span><em class="db-down">2% down on last Friday</em>
+              </div>
+              <div class="db-stat db-stat--gold"><b>18</b><span>New members</span><em>6 joined from the website</em>
+              </div>
+            </div>
+          </section>
+
+          <section class="db-sec" aria-labelledby="ao2">
+            <div class="db-sec__h">
+              <h3 class="cf-display" id="ao2">Sales this week</h3>
+              <a href="404.html" class="cf-link">Compare with last week</a>
+              <p>Daily revenue in thousands of rupees.</p>
+            </div>
+            <div class="db-split">
+              <article class="db-card db-card--brown db-chartcard">
+                <div class="db-chart" role="img"
+                  aria-label="Revenue by day: Mon 38k, Tue 41k, Wed 36k, Thu 44k, Fri 49k, Sat 63k, Sun 57k">
+                  <div class="db-bar" style="--h:54%;--i:0"><b>38</b><i></i><span>Mon</span></div>
+                  <div class="db-bar" style="--h:59%;--i:1"><b>41</b><i></i><span>Tue</span></div>
+                  <div class="db-bar" style="--h:51%;--i:2"><b>36</b><i></i><span>Wed</span></div>
+                  <div class="db-bar" style="--h:63%;--i:3"><b>44</b><i></i><span>Thu</span></div>
+                  <div class="db-bar" style="--h:70%;--i:4"><b>49</b><i></i><span>Fri</span></div>
+                  <div class="db-bar db-bar--top" style="--h:90%;--i:5"><b>63</b><i></i><span>Sat</span></div>
+                  <div class="db-bar" style="--h:81%;--i:6"><b>57</b><i></i><span>Sun</span></div>
+                </div>
+              </article>
+              <article class="db-card db-sum">
+                <div><b>₹3.28 lakh</b><span>Week total</span></div>
+                <div><b>Saturday</b><span>Best day, ₹63,000</span></div>
+                <div><b>₹46,900</b><span>Daily average</span></div>
+              </article>
+            </div>
+          </section>
+
+          <section class="db-sec" aria-labelledby="ao3">
+            <div class="db-sec__h">
+              <h3 class="cf-display" id="ao3">Live queue</h3>
+              <a href="404.html" class="cf-link">Open the full queue</a>
+            </div>
+            <div class="db-rows">
+              <article class="db-row"><span class="db-round">M</span>
+                <div>
+                  <h4>#ST-2491, Meera R.</h4>
+                  <p>2× Sage &amp; Honey Flat White</p>
+                </div>
+                <div class="db-row__end"><span class="db-tag db-tag--line">New</span><a href="404.html"
+                    class="db-btn db-btn--sm">Accept</a></div>
+              </article>
+              <article class="db-row"><span class="db-round">J</span>
+                <div>
+                  <h4>#ST-2490, James T.</h4>
+                  <p>Caramel Bloom Latte, Almond croissant</p>
+                </div>
+                <div class="db-row__end"><span class="db-tag db-tag--gold">Brewing</span><a href="404.html"
+                    class="db-btn db-btn--sm db-btn--line">Open</a></div>
+              </article>
+              <article class="db-row"><span class="db-round">R</span>
+                <div>
+                  <h4>#ST-2488, Ravi K.</h4>
+                  <p>Midnight Cortado</p>
+                </div>
+                <div class="db-row__end"><span class="db-tag db-tag--gold">Brewing</span><a href="404.html"
+                    class="db-btn db-btn--sm db-btn--line">Open</a></div>
+              </article>
+              <article class="db-row"><span class="db-round">P</span>
+                <div>
+                  <h4>#ST-2489, Priya S.</h4>
+                  <p>250 g Ethiopia Guji beans</p>
+                </div>
+                <div class="db-row__end"><span class="db-tag">Ready</span><a href="404.html"
+                    class="db-btn db-btn--sm db-btn--line">Hand over</a></div>
+              </article>
+            </div>
+          </section>
+        </div>
+
+        <!-- ============ ORDERS ============ -->
+        <div class="db-panel" id="orders">
+          <div class="db-ph">
+            <h2 class="cf-display">Orders</h2>
+            <p>Where every order stands right now, the latest tickets and when the bar gets busiest.</p>
+          </div>
+
+          <section class="db-sec" aria-labelledby="ad1">
+            <div class="db-sec__h">
+              <h3 class="cf-display" id="ad1">Order status</h3>
+              <p>214 orders so far today.</p>
+            </div>
+            <div class="db-stats">
+              <div class="db-stat db-stat--gold"><b>6</b><span>New, waiting to start</span></div>
+              <div class="db-stat db-stat--brown"><b>9</b><span>Brewing on the bar</span></div>
+              <div class="db-stat"><b>4</b><span>Ready for pickup</span></div>
+              <div class="db-stat"><b>195</b><span>Completed today</span></div>
+            </div>
+          </section>
+
+          <section class="db-sec" aria-labelledby="ad2">
+            <div class="db-sec__h">
+              <h3 class="cf-display" id="ad2">Latest orders</h3>
+              <a href="404.html" class="cf-link">Export orders</a>
+            </div>
+            <div class="db-tablewrap">
+              <table class="db-table">
+                <thead>
+                  <tr>
+                    <th scope="col">Order</th>
+                    <th scope="col">Customer</th>
+                    <th scope="col">Items</th>
+                    <th scope="col">Total</th>
+                    <th scope="col">Status</th>
+                    <th scope="col"><span style="position:absolute;left:-9999px">Action</span></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="db-id" data-label="Order">#ST-2491</td>
+                    <td data-label="Customer">Meera R.</td>
+                    <td data-label="Items">2× Sage &amp; Honey Flat White</td>
+                    <td data-label="Total">₹560</td>
+                    <td data-label="Status"><span class="db-tag db-tag--line">New</span></td>
+                    <td data-label=""><a href="404.html" class="db-btn db-btn--sm db-btn--line">View</a></td>
+                  </tr>
+                  <tr>
+                    <td class="db-id" data-label="Order">#ST-2490</td>
+                    <td data-label="Customer">James T.</td>
+                    <td data-label="Items">Caramel Bloom Latte, Almond croissant</td>
+                    <td data-label="Total">₹410</td>
+                    <td data-label="Status"><span class="db-tag db-tag--gold">Brewing</span></td>
+                    <td data-label=""><a href="404.html" class="db-btn db-btn--sm db-btn--line">View</a></td>
+                  </tr>
+                  <tr>
+                    <td class="db-id" data-label="Order">#ST-2489</td>
+                    <td data-label="Customer">Priya S.</td>
+                    <td data-label="Items">250 g Ethiopia Guji beans</td>
+                    <td data-label="Total">₹690</td>
+                    <td data-label="Status"><span class="db-tag">Ready</span></td>
+                    <td data-label=""><a href="404.html" class="db-btn db-btn--sm db-btn--line">View</a></td>
+                  </tr>
+                  <tr>
+                    <td class="db-id" data-label="Order">#ST-2488</td>
+                    <td data-label="Customer">Ravi K.</td>
+                    <td data-label="Items">Midnight Cortado</td>
+                    <td data-label="Total">₹210</td>
+                    <td data-label="Status"><span class="db-tag db-tag--gold">Brewing</span></td>
+                    <td data-label=""><a href="404.html" class="db-btn db-btn--sm db-btn--line">View</a></td>
+                  </tr>
+                  <tr>
+                    <td class="db-id" data-label="Order">#ST-2487</td>
+                    <td data-label="Customer">Anya M.</td>
+                    <td data-label="Items">Honey Cardamom Latte ×2, Cold brew</td>
+                    <td data-label="Total">₹820</td>
+                    <td data-label="Status"><span class="db-tag">Completed</span></td>
+                    <td data-label=""><a href="404.html" class="db-btn db-btn--sm db-btn--line">View</a></td>
+                  </tr>
+                  <tr>
+                    <td class="db-id" data-label="Order">#ST-2486</td>
+                    <td data-label="Customer">Tom B.</td>
+                    <td data-label="Items">Cold brew</td>
+                    <td data-label="Total">₹240</td>
+                    <td data-label="Status"><span class="db-tag db-tag--rust">Refunded</span></td>
+                    <td data-label=""><a href="404.html" class="db-btn db-btn--sm db-btn--line">View</a></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          <section class="db-sec" aria-labelledby="ad3">
+            <div class="db-sec__h">
+              <h3 class="cf-display" id="ad3">Busiest hours today</h3>
+              <p>Orders per hour, from 7 am to 7 pm. Darker means busier.</p>
+            </div>
+            <div class="db-card">
+              <ul class="db-heat" aria-label="Orders per hour from 7 am to 7 pm">
+                <li style="--l:2"><span>7</span></li>
+                <li style="--l:4"><span>8</span></li>
+                <li style="--l:4"><span>9</span></li>
+                <li style="--l:3"><span>10</span></li>
+                <li style="--l:2"><span>11</span></li>
+                <li style="--l:3"><span>12</span></li>
+                <li style="--l:3"><span>1</span></li>
+                <li style="--l:2"><span>2</span></li>
+                <li style="--l:2"><span>3</span></li>
+                <li style="--l:3"><span>4</span></li>
+                <li style="--l:4"><span>5</span></li>
+                <li style="--l:3"><span>6</span></li>
+                <li style="--l:1"><span>7</span></li>
+              </ul>
+              <p class="db-heat-note">The rush runs from 8 to 10 am and again around 5 pm, so schedule two baristas on
+                the bar for both.</p>
+            </div>
+          </section>
+        </div>
+
+        <!-- ============ MENU & STOCK ============ -->
+        <div class="db-panel" id="stock">
+          <div class="db-ph">
+            <h2 class="cf-display">Menu &amp; stock</h2>
+            <p>What sells, what's running low and which drinks are on the menu today.</p>
+          </div>
+
+          <section class="db-sec" aria-labelledby="as1">
+            <div class="db-sec__h">
+              <h3 class="cf-display" id="as1">Bestsellers this week</h3>
+              <a href="404.html" class="cf-link">Full sales report</a>
+            </div>
+            <ol class="db-rows">
+              <li class="db-row"><span class="db-rank">1</span>
+                <div>
+                  <h4>Honey Cardamom Latte</h4>
+                  <div class="db-meter" style="--v:100%;margin-top:8px"><i></i></div>
+                </div><span class="db-row__val">182 sold</span>
+              </li>
+              <li class="db-row"><span class="db-rank">2</span>
+                <div>
+                  <h4>Caramel Bloom Latte</h4>
+                  <div class="db-meter" style="--v:88%;margin-top:8px"><i></i></div>
+                </div><span class="db-row__val">161 sold</span>
+              </li>
+              <li class="db-row"><span class="db-rank">3</span>
+                <div>
+                  <h4>Sage &amp; Honey Flat White</h4>
+                  <div class="db-meter" style="--v:76%;margin-top:8px"><i></i></div>
+                </div><span class="db-row__val">138 sold</span>
+              </li>
+              <li class="db-row"><span class="db-rank">4</span>
+                <div>
+                  <h4>Midnight Cortado</h4>
+                  <div class="db-meter" style="--v:64%;margin-top:8px"><i></i></div>
+                </div><span class="db-row__val">117 sold</span>
+              </li>
+              <li class="db-row"><span class="db-rank">5</span>
+                <div>
+                  <h4>Cold brew</h4>
+                  <div class="db-meter" style="--v:53%;margin-top:8px"><i></i></div>
+                </div><span class="db-row__val">96 sold</span>
+              </li>
+            </ol>
+          </section>
+
+          <section class="db-sec" aria-labelledby="as2">
+            <div class="db-sec__h">
+              <h3 class="cf-display" id="as2">Stock levels</h3>
+              <a href="404.html" class="cf-link">Reorder supplies</a>
+              <p>Two items are below 30% and need a refill this week.</p>
+            </div>
+            <div class="db-card">
+              <ul class="db-taste">
+                <li>
+                  <div>Ethiopia Guji beans <span>72% left</span></div>
+                  <div class="db-meter" style="--v:72%"><i></i></div>
+                </li>
+                <li>
+                  <div>Whole milk <span>64% left</span></div>
+                  <div class="db-meter" style="--v:64%"><i></i></div>
+                </li>
+                <li>
+                  <div>Paper cups <span>41% left</span></div>
+                  <div class="db-meter" style="--v:41%"><i></i></div>
+                </li>
+                <li>
+                  <div>Oat milk <span>28% left, low</span></div>
+                  <div class="db-meter db-meter--rust" style="--v:28%"><i></i></div>
+                </li>
+                <li>
+                  <div>Caramel syrup <span>18% left, low</span></div>
+                  <div class="db-meter db-meter--rust" style="--v:18%"><i></i></div>
+                </li>
+              </ul>
+            </div>
+          </section>
+
+          <section class="db-sec" aria-labelledby="as3">
+            <div class="db-sec__h">
+              <h3 class="cf-display" id="as3">Today's menu</h3>
+              <a href="404.html" class="db-btn db-btn--sm">Add a drink</a>
+            </div>
+            <div class="db-rows">
+              <article class="db-row db-row--2">
+                <div>
+                  <h4>Honey Cardamom Latte</h4>
+                  <p>₹290</p>
+                </div>
+                <div class="db-row__end"><span class="db-tag">On the menu</span><a href="404.html"
+                    class="db-btn db-btn--sm db-btn--line">Edit</a></div>
+              </article>
+              <article class="db-row db-row--2">
+                <div>
+                  <h4>Caramel Bloom Latte</h4>
+                  <p>₹260</p>
+                </div>
+                <div class="db-row__end"><span class="db-tag db-tag--rust">Low on syrup</span><a href="404.html"
+                    class="db-btn db-btn--sm db-btn--line">Edit</a></div>
+              </article>
+              <article class="db-row db-row--2">
+                <div>
+                  <h4>Sage &amp; Honey Flat White</h4>
+                  <p>₹280</p>
+                </div>
+                <div class="db-row__end"><span class="db-tag">On the menu</span><a href="404.html"
+                    class="db-btn db-btn--sm db-btn--line">Edit</a></div>
+              </article>
+              <article class="db-row db-row--2">
+                <div>
+                  <h4>Midnight Cortado</h4>
+                  <p>₹210</p>
+                </div>
+                <div class="db-row__end"><span class="db-tag db-tag--line">Sold out today</span><a href="404.html"
+                    class="db-btn db-btn--sm db-btn--line">Edit</a></div>
+              </article>
+            </div>
+          </section>
+        </div>
+
+        <!-- ============ CUSTOMERS ============ -->
+        <div class="db-panel" id="customers">
+          <div class="db-ph">
+            <h2 class="cf-display">Customers</h2>
+            <p>Who's walking in, who keeps coming back and what they're saying about the café.</p>
+          </div>
+
+          <section class="db-sec" aria-labelledby="ac1">
+            <div class="db-sec__h">
+              <h3 class="cf-display" id="ac1">Customer groups</h3>
+              <a href="404.html" class="cf-link">Manage groups</a>
+            </div>
+            <div class="db-stats">
+              <div class="db-stat db-stat--brown"><b>612</b><span>Regulars, weekly or more</span></div>
+              <div class="db-stat"><b>128</b><span>New this month</span></div>
+              <div class="db-stat db-stat--gold"><b>74</b><span>Bean subscribers</span></div>
+              <div class="db-stat"><b>41</b><span>Haven't visited in 60 days</span></div>
+            </div>
+          </section>
+
+          <section class="db-sec" aria-labelledby="ac2">
+            <div class="db-sec__h">
+              <h3 class="cf-display" id="ac2">Top customers this quarter</h3>
+              <a href="404.html" class="cf-link">See all customers</a>
+            </div>
+            <div class="db-rows">
+              <article class="db-row"><span class="db-round"><img src="assets/images/avatar-1.webp" alt="" width="52"
+                    height="52"></span>
+                <div>
+                  <h4>Meera R.</h4>
+                  <p>Weekday regular, 38 orders</p>
+                </div>
+                <div class="db-row__end"><span class="db-row__val">₹9,420</span><a href="404.html"
+                    class="db-btn db-btn--sm db-btn--line">View</a></div>
+              </article>
+              <article class="db-row"><span class="db-round"><img src="assets/images/avatar-2.webp" alt="" width="52"
+                    height="52"></span>
+                <div>
+                  <h4>James T.</h4>
+                  <p>Weekend visitor, 29 orders</p>
+                </div>
+                <div class="db-row__end"><span class="db-row__val">₹6,870</span><a href="404.html"
+                    class="db-btn db-btn--sm db-btn--line">View</a></div>
+              </article>
+              <article class="db-row"><span class="db-round"><img src="assets/images/avatar-3.webp" alt="" width="52"
+                    height="52"></span>
+                <div>
+                  <h4>Priya S.</h4>
+                  <p>Home brewer, 21 orders</p>
+                </div>
+                <div class="db-row__end"><span class="db-row__val">₹5,310</span><a href="404.html"
+                    class="db-btn db-btn--sm db-btn--line">View</a></div>
+              </article>
+            </div>
+          </section>
+
+          <section class="db-sec" aria-labelledby="ac3">
+            <div class="db-sec__h">
+              <h3 class="cf-display" id="ac3">Recent feedback</h3>
+              <a href="404.html" class="cf-link">All reviews</a>
+            </div>
+            <div class="db-fb">
+              <article class="db-card">
+                <div class="db-stars" aria-label="5 stars"><i class="fa-solid fa-star"></i><i
+                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                    class="fa-solid fa-star"></i></div>
+                <blockquote>The Honey Cardamom Latte is the reason I walk the long way to work.</blockquote>
+                <footer><span><b>Nadia</b><small>Morning regular</small></span><a href="404.html"
+                    class="db-btn db-btn--sm">Reply</a></footer>
+              </article>
+              <article class="db-card">
+                <div class="db-stars" aria-label="5 stars"><i class="fa-solid fa-star"></i><i
+                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                    class="fa-solid fa-star"></i></div>
+                <blockquote>Gifted a bag of beans to my dad and he called the next day asking for more.</blockquote>
+                <footer><span><b>Iris</b><small>Gift giver</small></span><a href="404.html"
+                    class="db-btn db-btn--sm">Reply</a></footer>
+              </article>
+              <article class="db-card">
+                <div class="db-stars" aria-label="3 stars"><i class="fa-solid fa-star"></i><i
+                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i><i
+                    class="fa-regular fa-star"></i></div>
+                <blockquote>Lovely coffee, but my order waited ten minutes at the counter on Saturday.</blockquote>
+                <footer><span><b>Dan</b><small>Remote worker</small></span><a href="404.html"
+                    class="db-btn db-btn--sm">Reply</a></footer>
+              </article>
+            </div>
+          </section>
+        </div>
+
+      </main>
+    </div>
+  </div>
+
+  <script src="assets/js/dashboard.js"></script>
+</body>
+
+</html>

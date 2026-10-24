@@ -1,0 +1,464 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Origins | Stackly - Every Bean Has a Story</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Zen+Maru+Gothic:wght@400;500;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/origins.css">
+</head>
+
+<body class="cf">
+  <script>document.documentElement.classList.add('js', 'cf-loading')</script>
+
+  <!-- PRELOADER -->
+  <div class="cf-preloader" id="cfPreloader" role="status" aria-live="polite" aria-label="Loading Stackly">
+    <div class="cf-preloader__in">
+      <span class="cf-preloader__steam" aria-hidden="true"><i></i><i></i><i></i></span>
+      <img class="cf-preloader__logo" src="assets/images/stackly-logo.webp" alt="Stackly">
+      <p class="cf-preloader__txt">Brewing your experience</p>
+      <span class="cf-preloader__bar" aria-hidden="true"><i></i></span>
+    </div>
+  </div>
+
+  <header class="cf-header">
+    <div class="cf-header__in">
+      <a href="index.html" class="cf-logo" aria-label="Stackly home"><img src="assets/images/stackly-logo.webp" alt="Stackly"></a>
+      <nav class="cf-nav" id="cfNav" aria-label="Main">
+        <a href="index.html">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="origins.html" class="is-active" aria-current="page">Origins</a>
+        <a href="experience.html">Experience</a>
+        <a href="contact.html">Contact</a>
+        <a href="login.html" class="cf-btn cf-login cf-nav__login"><i class="fa-solid fa-user"></i> Login</a>
+      </nav>
+      <div class="cf-tools">
+        <a href="login.html" class="cf-btn cf-login"><i class="fa-solid fa-user"></i> Login</a>
+        <button class="cf-burger" id="cfBurger" aria-label="Menu" aria-expanded="false"
+          aria-controls="cfNav"><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="or-hero" aria-labelledby="orTitle">
+      <div class="cf-wrap">
+        <div class="or-hero__in">
+          <div class="or-hero__text">
+            <p class="cf-eyebrow cf-hero__tag cf-anim" style="--d:.05s"><i aria-hidden="true"></i>SPECIALTY COFFEE<span
+                class="cf-hero__tag-rest"> - ORIGINS</span></p>
+            <h1 class="cf-display cf-h1 cf-h1--hero" id="orTitle">
+              <span class="cf-anim" style="--d:.16s">Every Bean Has</span>
+              <span class="cf-h1__gold cf-anim" style="--d:.3s">a Story</span>
+            </h1>
+            <p class="cf-lead or-hero__lead cf-anim" style="--d:.44s">Before it is a flat white, it is a cherry on a branch, a season of weather and a pair of hands. Follow one cup back to where it began.</p>
+            <div class="cf-actions or-hero__actions cf-anim" style="--d:.58s">
+              <a href="menu.html" class="cf-btn">Order online <span class="cf-btn__icon"><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span></a>
+              <a href="menu.html" class="cf-link--light cf-link--icon">Explore menu <span class="cf-btn__icon"><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span></a>
+            </div>
+            <ul class="or-hero__meta cf-anim" style="--d:.72s">
+              <li><i class="fa-solid fa-earth-asia" aria-hidden="true"></i> Six growing regions</li>
+              <li><i class="fa-solid fa-mug-hot" aria-hidden="true"></i> Four flavour profiles</li>
+              <li><i class="fa-solid fa-leaf" aria-hidden="true"></i> Sourced with respect</li>
+            </ul>
+          </div>
+          <div class="or-hero__media cf-anim" id="orHeroMedia" style="--d:.3s">
+            <img class="or-hero__photo" src="assets/images/orgin.webp" alt="Roasted coffee beans spilling from a wooden scoop" fetchpriority="high">
+          </div>
+          <aside class="or-hero__pick cf-anim" style="--d:.9s" aria-label="Explore the bean belt">
+            <img src="assets/images/harvest.webp" alt="" width="72" height="72">
+            <div class="or-hero__pick-txt">
+              <h2 class="cf-display or-hero__pick-name">The Bean Belt</h2>
+              <p class="or-hero__pick-sub">Six regions, one narrow band around the equator</p>
+            </div>
+            <a href="404.html" class="or-hero__pick-go" aria-label="See the six growing regions"><i class="fa-solid fa-arrow-down" aria-hidden="true"></i></a>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- FLAVOUR -->
+    <section class="cf-sec cf-sec--cream or-flavour" aria-labelledby="orFlavourTitle">
+      <div class="cf-wrap">
+        <div class="or-head">
+          <div data-aos="fade-right">
+            <p class="cf-kicker">FLAVOUR PROFILES</p>
+            <h2 class="cf-display cf-h2 cf-h2--sm" id="orFlavourTitle">Flavour starts long before<br class="or-br"> the grinder</h2>
+          </div>
+          <p class="or-note" data-aos="fade-left" data-aos-delay="150">A coffee’s character is set by its variety, its altitude, its soil and the way it is handled after picking. Here is how we think about choosing a bean.</p>
+        </div>
+        <div class="or-flavour__body">
+          <figure class="or-flavour__media" data-aos="fade-right">
+            <img src="assets/images/coffee-powder.webp" alt="A mound of roasted coffee beans with beans scattered above" width="483" height="483" loading="lazy">
+          </figure>
+          <ul class="or-flavours">
+          <li data-aos="fade-up">
+            <article class="or-flavour-card">
+              <div class="or-flavour-card__top">
+                <span class="or-flavour-card__icon" aria-hidden="true"><i class="fa-solid fa-lemon"></i></span>
+                <span class="or-flavour-card__no" aria-hidden="true">01</span>
+              </div>
+              <div class="or-flavour-card__body">
+                <h3 class="cf-display cf-h3">Fruity &amp; bright</h3>
+                <p>Lively acidity that tastes like fruit rather than sourness, from citrus to berries.</p>
+                <p class="or-flavour-card__meta"><i class="fa-solid fa-location-dot" aria-hidden="true"></i><span>Often found in: <b>Kenya, Ethiopia</b></span></p>
+              </div>
+            </article>
+          </li>
+          <li data-aos="fade-up" data-aos-delay="120">
+            <article class="or-flavour-card">
+              <div class="or-flavour-card__top">
+                <span class="or-flavour-card__icon" aria-hidden="true"><i class="fa-solid fa-spa"></i></span>
+                <span class="or-flavour-card__no" aria-hidden="true">02</span>
+              </div>
+              <div class="or-flavour-card__body">
+                <h3 class="cf-display cf-h3">Floral &amp; tea-like</h3>
+                <p>Delicate and aromatic, closer to jasmine or black tea than to a typical cup of coffee.</p>
+                <p class="or-flavour-card__meta"><i class="fa-solid fa-location-dot" aria-hidden="true"></i><span>Often found in: <b>Ethiopia</b></span></p>
+              </div>
+            </article>
+          </li>
+          <li data-aos="fade-up" data-aos-delay="240">
+            <article class="or-flavour-card">
+              <div class="or-flavour-card__top">
+                <span class="or-flavour-card__icon" aria-hidden="true"><i class="fa-solid fa-cookie-bite"></i></span>
+                <span class="or-flavour-card__no" aria-hidden="true">03</span>
+              </div>
+              <div class="or-flavour-card__body">
+                <h3 class="cf-display cf-h3">Chocolate &amp; nutty</h3>
+                <p>Comforting, low in acidity and full-bodied. The classic base for espresso and milk drinks.</p>
+                <p class="or-flavour-card__meta"><i class="fa-solid fa-location-dot" aria-hidden="true"></i><span>Often found in: <b>Brazil, Colombia</b></span></p>
+              </div>
+            </article>
+          </li>
+          <li data-aos="fade-up" data-aos-delay="360">
+            <article class="or-flavour-card">
+              <div class="or-flavour-card__top">
+                <span class="or-flavour-card__icon" aria-hidden="true"><i class="fa-solid fa-stroopwafel"></i></span>
+                <span class="or-flavour-card__no" aria-hidden="true">04</span>
+              </div>
+              <div class="or-flavour-card__body">
+                <h3 class="cf-display cf-h3">Caramel &amp; sweet</h3>
+                <p>Rounded sweetness reminiscent of toffee, brown sugar and baked fruit.</p>
+                <p class="or-flavour-card__meta"><i class="fa-solid fa-location-dot" aria-hidden="true"></i><span>Often found in: <b>Colombia, India</b></span></p>
+              </div>
+            </article>
+          </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- BEAN BELT -->
+    <section class="cf-sec cf-sec--dark or-belt" aria-labelledby="orBeltTitle">
+      <div class="cf-wrap">
+        <div class="or-head or-head--light">
+          <div data-aos="fade-right">
+            <p class="cf-kicker cf-kicker--gold">THE BEAN BELT</p>
+            <h2 class="cf-display cf-h2 cf-h2--sm cf-h2--light" id="orBeltTitle">The bean belt, one region<br class="or-br"> at a time</h2>
+          </div>
+          <p class="or-note" data-aos="fade-left" data-aos-delay="150">Coffee grows in a narrow band around the equator, in high, cool, well-watered places. Six regions that show how different that can taste.</p>
+        </div>
+        <figure class="or-belt__media" id="orBelt" data-aos="fade-up">
+          <img src="assets/images/coffee-shop.webp" alt="A warmly lit café at night with guests seated at the counter" width="1320" height="728" loading="lazy">
+        </figure>
+      </div>
+    </section>
+
+    <!-- GROWERS -->
+    <section class="cf-sec cf-sec--cream or-grow" aria-labelledby="orGrowTitle">
+      <div class="cf-wrap">
+        <div class="or-grow__in">
+
+          <div class="or-grow__top">
+            <div class="or-grow__content" data-aos="fade-right">
+              <p class="cf-kicker">MEET THE GROWERS</p>
+              <h2 class="cf-display cf-h2 cf-h2--sm" id="orGrowTitle">The hands that pick<br>every cherry</h2>
+              <p class="or-grow__lead">Great coffee is grown, not manufactured. We partner with small farms who shade-grow their trees, pick by hand at peak ripeness and sort the cherries the same day. Every cup begins with their patience.</p>
+              <ul class="or-grow__stats">
+                <li><b>1,800m</b><span>Altitude</span></li>
+                <li><b>100%</b><span>Hand-picked</span></li>
+                <li><b>4</b><span>Generations</span></li>
+              </ul>
+            </div>
+            <div class="or-grow__img-wrap" data-aos="fade-left">
+              <img class="or-grow__img" src="assets/images/coffee-origin.webp" alt="Coffee cherries ripening on a shaded highland farm" loading="lazy">
+              <div class="or-grow__img-tag"><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Highland Estate · 1,800m</div>
+            </div>
+          </div>
+
+          <ul class="or-grow__strip" data-aos="fade-up">
+            <li>
+              <img src="assets/images/harvest.webp" alt="Coffee cherries being harvested by hand">
+              <span><em>01</em> Harvest</span>
+            </li>
+            <li>
+              <img src="assets/images/bloom.webp" alt="Coffee plants in bloom">
+              <span><em>02</em> Bloom</span>
+            </li>
+            <li>
+              <img src="assets/images/pour.webp" alt="Fresh coffee being poured">
+              <span><em>03</em> Pour</span>
+            </li>
+          </ul>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ROASTERY -->
+    <section class="or-roast2" aria-labelledby="orRoast2Title">
+      <div class="cf-wrap">
+        <div class="or-roast2__card" data-aos="fade-up">
+          <span class="or-roast2__wm" aria-hidden="true">ROAST</span>
+          <div class="or-roast2__left">
+            <p class="cf-kicker">OUR ROASTERY</p>
+            <h2 class="cf-display or-roast2__h2" id="orRoast2Title">Roasted in<br>small batches</h2>
+            <p class="or-roast2__lead">Green beans keep their secrets until heat draws them out. We roast in small batches on a drum roaster, develop each origin to its own curve and let the beans rest so the flavour lands clean in your cup.</p>
+            <dl class="or-roast2__spec">
+              <div><dt><i class="fa-solid fa-fire-flame-curved" aria-hidden="true"></i> Roast style</dt><dd>Small batch, drum-roasted</dd></div>
+              <div><dt><i class="fa-regular fa-calendar" aria-hidden="true"></i> Cadence</dt><dd>Roasted fresh every week</dd></div>
+              <div><dt><i class="fa-solid fa-hourglass-half" aria-hidden="true"></i> Rest period</dt><dd>7 days before serving</dd></div>
+              <div><dt><i class="fa-solid fa-handshake" aria-hidden="true"></i> Sourcing</dt><dd>Direct from the farm</dd></div>
+            </dl>
+          </div>
+          <div class="or-roast2__right">
+            <div class="or-roast2__img-frame">
+              <img src="assets/images/roast.webp" alt="Coffee beans roasting in a small-batch drum roaster" loading="lazy">
+            </div>
+            <div class="or-roast2__badge">
+              <i class="fa-solid fa-certificate" aria-hidden="true"></i>
+              <span>Small<br>batch</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BESTSELLERS -->
+    <section class="or-best" aria-labelledby="orBestTitle">
+      <div class="cf-wrap">
+
+        <div class="or-best__head" data-aos="fade-up">
+          <div>
+            <p class="cf-kicker">SIGNATURE DRINKS</p>
+            <h2 class="cf-display or-best__h2" id="orBestTitle">Crafted with care,<br><em>ordered every day.</em></h2>
+          </div>
+          <p class="or-best__sub">Every cup on this list has earned its place. Born from great beans, refined through dozens of test batches, and loved by the people who know their coffee.</p>
+        </div>
+
+        <div class="or-best__track-wrap">
+          <ul class="or-best__track" id="orMenu" role="list">
+
+            <li class="or-best__item" data-aos="fade-up">
+              <article class="or-best__card">
+        
+                <div class="or-best__img-ring">
+                  <img src="assets/images/oats.webp" alt="Oat Milk Flat White" loading="lazy">
+                  <span class="or-best__price cf-display">$5.25</span>
+                </div>
+                <div class="or-best__body">
+                  <div class="or-best__meta">
+                    <span class="or-best__tag"><i class="fa-solid fa-mug-hot" aria-hidden="true"></i> Espresso</span>
+                    <span class="or-best__time"><i class="fa-regular fa-clock" aria-hidden="true"></i> 4 min</span>
+                  </div>
+                  <h3 class="cf-display or-best__name">Oat Milk Flat White</h3>
+                  <p>Double ristretto pulled short, married with velvety oat milk and finished with a paper-thin cap of microfoam.</p>
+                  <ul class="or-best__notes">
+                    <li>Nutty</li><li>Smooth</li><li>Balanced</li>
+                  </ul>
+                  <div class="or-best__row">
+                    <a href="menu.html" class="or-best__link">View on menu <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                    <a href="404.html" class="or-add" aria-label="Save Oat Milk Flat White to your order" data-name="Oat Milk Flat White">
+                      <span class="or-add__inner"><i class="fa-solid fa-plus" aria-hidden="true"></i></span>
+                    </a>
+                  </div>
+                </div>
+              </article>
+            </li>
+
+            <li class="or-best__item" data-aos="fade-up" data-aos-delay="80">
+              <article class="or-best__card">
+             
+                <div class="or-best__img-ring">
+                  <img src="assets/images/caramel-latte.webp" alt="Caramel Bloom Latte" loading="lazy">
+                  <span class="or-best__price cf-display">$5.25</span>
+                </div>
+                <div class="or-best__body">
+                  <div class="or-best__meta">
+                    <span class="or-best__tag or-best__tag--gold"><i class="fa-solid fa-star" aria-hidden="true"></i> Bestseller</span>
+                    <span class="or-best__time"><i class="fa-regular fa-clock" aria-hidden="true"></i> 5 min</span>
+                  </div>
+                  <h3 class="cf-display or-best__name">Caramel Bloom Latte</h3>
+                  <p>House-made salted caramel folded into a double-shot latte, with slow-steamed whole milk and a drizzle on top.</p>
+                  <ul class="or-best__notes">
+                    <li>Caramel</li><li>Sweet</li><li>Creamy</li>
+                  </ul>
+                  <div class="or-best__row">
+                    <a href="menu.html" class="or-best__link">View on menu <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                    <a href="404.html" class="or-add" aria-label="Save Caramel Bloom Latte to your order" data-name="Caramel Bloom Latte">
+                      <span class="or-add__inner"><i class="fa-solid fa-plus" aria-hidden="true"></i></span>
+                    </a>
+                  </div>
+                </div>
+              </article>
+            </li>
+
+            <li class="or-best__item" data-aos="fade-up" data-aos-delay="160">
+              <article class="or-best__card">
+               
+                <div class="or-best__img-ring">
+                  <img src="assets/images/honey.webp" alt="Honey Cardamom Cold Brew" loading="lazy">
+                  <span class="or-best__price cf-display">$5.25</span>
+                </div>
+                <div class="or-best__body">
+                  <div class="or-best__meta">
+                    <span class="or-best__tag"><i class="fa-solid fa-snowflake" aria-hidden="true"></i> Cold brew</span>
+                    <span class="or-best__time"><i class="fa-regular fa-clock" aria-hidden="true"></i> 2 min</span>
+                  </div>
+                  <h3 class="cf-display or-best__name">Honey Cardamom Cold Brew</h3>
+                  <p>18-hour cold-steeped single-origin, sweetened with raw wildflower honey and a pinch of hand-ground cardamom.</p>
+                  <ul class="or-best__notes">
+                    <li>Floral</li><li>Spiced</li><li>Bold</li>
+                  </ul>
+                  <div class="or-best__row">
+                    <a href="menu.html" class="or-best__link">View on menu <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                    <a href="404.html" class="or-add" aria-label="Save Honey Cardamom Cold Brew to your order" data-name="Honey Cardamom Cold Brew">
+                      <span class="or-add__inner"><i class="fa-solid fa-plus" aria-hidden="true"></i></span>
+                    </a>
+                  </div>
+                </div>
+              </article>
+            </li>
+
+            <li class="or-best__item" data-aos="fade-up" data-aos-delay="240">
+              <article class="or-best__card">
+              
+                <div class="or-best__img-ring">
+                  <img src="assets/images/sage.webp" alt="Sage Tonic Espresso" loading="lazy">
+                  <span class="or-best__price cf-display">$5.25</span>
+                </div>
+                <div class="or-best__body">
+                  <div class="or-best__meta">
+                    <span class="or-best__tag"><i class="fa-solid fa-leaf" aria-hidden="true"></i> Seasonal</span>
+                    <span class="or-best__time"><i class="fa-regular fa-clock" aria-hidden="true"></i> 4 min</span>
+                  </div>
+                  <h3 class="cf-display or-best__name">Sage Tonic Espresso</h3>
+                  <p>A bright double espresso poured over chilled tonic water, lifted with fresh sage and a curl of orange peel.</p>
+                  <ul class="or-best__notes">
+                    <li>Herbal</li><li>Citrus</li><li>Bright</li>
+                  </ul>
+                  <div class="or-best__row">
+                    <a href="menu.html" class="or-best__link">View on menu <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                    <a href="404.html" class="or-add" aria-label="Save Sage Tonic Espresso to your order" data-name="Sage Tonic Espresso">
+                      <span class="or-add__inner"><i class="fa-solid fa-plus" aria-hidden="true"></i></span>
+                    </a>
+                  </div>
+                </div>
+              </article>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="or-cta" aria-labelledby="orCtaTitle">
+      <div class="or-cta__inner">
+        <h2 class="cf-display or-cta__title" id="orCtaTitle" data-aos="fade-up">Your Brew. Ready When<br>You Are.</h2>
+        <p class="or-cta__lead" data-aos="fade-up" data-aos-delay="80">
+          Build your order in a minute, pick a time and collect it fresh at the counter.
+          Your <b id="orSaved" aria-live="polite">0</b> saved item(s) will be waiting.
+        </p>
+        <div class="or-cta__actions" data-aos="fade-up" data-aos-delay="160">
+          <a href="menu.html" class="cf-btn">Start your order <span class="cf-btn__icon"><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span></a>
+          <a href="contact.html" class="cf-cta__ghost">Contact Us <i class="fa-solid fa-envelope" aria-hidden="true"></i></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="cf-footer" id="contact">
+    <div class="cf-wrap">
+      <div class="cf-fcta" data-aos="fade-up">
+        <h3 class="cf-display">Got Event in Mind?<br>Let’s collaborate.</h3>
+        <form class="cf-form" id="cfForm" novalidate>
+          <input type="email" placeholder="Enter your email" aria-label="Email address" required>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+
+      <div class="cf-fgrid">
+        <div class="cf-fcol cf-fcol--brand" data-aos="fade-up">
+          <a href="origins.html" class="cf-logo cf-logo--footer" aria-label="Stackly home"><img src="assets/images/stackly-logo.webp" alt="Stackly"></a>
+          <p>Small-batch coffee roasters. Sourced with respect, roasted with patience, served with a smile.</p>
+          <h4>Follow us</h4>
+          <div class="cf-social">
+            <a href="404.html" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+            <a href="404.html" aria-label="X (Twitter)"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a>
+            <a href="404.html" aria-label="Facebook"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
+            <a href="404.html" aria-label="YouTube"><i class="fa-brands fa-youtube" aria-hidden="true"></i></a>
+          </div>
+        </div>
+        <nav class="cf-fcol" data-aos="fade-up" data-aos-delay="100" aria-label="Footer">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="origins.html">Origins</a></li>
+            <li><a href="experience.html">Experience</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="cf-fcol" data-aos="fade-up" data-aos-delay="200">
+          <h4>Opening hours</h4>
+          <ul class="cf-fhours">
+            <li><b>Monday – Friday</b>7:00 am – 8:00 pm</li>
+            <li><b>Saturday</b>8:00 am – 9:00 pm</li>
+            <li><b>Sunday</b>10:00 am – 6:00 pm</li>
+          </ul>
+        </div>
+        <div class="cf-fcol cf-fcol--contact" data-aos="fade-up" data-aos-delay="300">
+          <h4>Contact us</h4>
+          <ul class="cf-fcontact">
+            <li><i class="fa-solid fa-phone" aria-hidden="true"></i><a href="404.html">+91 9876543210</a>
+            </li>
+            <li><i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+              <address>Salem, Tamil Nadu, India.</address>
+            </li>
+            <li><i class="fa-solid fa-envelope" aria-hidden="true"></i><a href="mailto:404.html">info@stackly.com</a>
+            </li>
+            <li><i class="fa-solid fa-mobile-screen-button" aria-hidden="true"></i><a href="404.html">+91 98765
+                43210</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="cf-fbar" data-aos="fade-up" data-aos-delay="100">
+        <p>© 2026 Stackly. All rights reserved.</p>
+        <a href="origins.html" class="cf-top">Back to top <span><i class="fa-solid fa-arrow-up"
+              aria-hidden="true"></i></span></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.3.11/dist/lenis.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/origins.js"></script>
+</body>
+
+</html>

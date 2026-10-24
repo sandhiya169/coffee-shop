@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Signup | Stackly</title>
+  <meta name="description" content="Create your Stackly account.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Zen+Maru+Gothic:wght@400;500;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/auth.css">
+</head>
+
+<body class="cf au au--signup">
+  <main class="au-page">
+    <a class="au-logo" href="index.html" aria-label="Stackly home">
+      <img src="assets/images/stackly-logo.webp" width="140" height="auto" alt="Stackly">
+    </a>
+
+    <div class="au-wrap">
+      <header class="au-head">
+        <h1 class="au-title">Create your own account</h1>
+        <p class="au-sub">Stackly is here to support your coffee needs every step of the way</p>
+      </header>
+
+      <section class="au-card" aria-labelledby="auCardTitle">
+        <h2 class="au-card__title" id="auCardTitle">Signup</h2>
+
+        <form class="au-form" id="auForm" data-page="signup" data-success="login.html" novalidate>
+          <div class="au-fields">
+            <fieldset class="au-field au-role">
+              <legend class="au-label">Signup as</legend>
+              <div class="au-role__opts">
+                <label class="au-role__opt">
+                  <input type="radio" name="role" value="customer" checked>
+                  <span class="au-role__pill"><i class="fa-solid fa-user" aria-hidden="true"></i>Customer</span>
+                </label>
+                <label class="au-role__opt">
+                  <input type="radio" name="role" value="admin">
+                  <span class="au-role__pill"><i class="fa-solid fa-user-shield" aria-hidden="true"></i>Admin</span>
+                </label>
+              </div>
+            </fieldset>
+
+            <div class="au-field">
+              <label class="au-label" for="auEmail">Email</label>
+              <input class="au-input" id="auEmail" name="email" type="email" placeholder="Enter your email"
+                autocomplete="email" maxlength="254" data-rule="email" aria-describedby="auEmailErr" required>
+              <p class="au-err" id="auEmailErr" aria-live="polite" hidden></p>
+            </div>
+
+            <div class="au-field">
+              <label class="au-label" for="auPassword">Password</label>
+              <div class="au-pw">
+                <input class="au-input au-input--pw" id="auPassword" name="password" type="password" placeholder="Enter your password"
+                autocomplete="new-password" maxlength="64" data-rule="newPassword" aria-describedby="auPasswordErr" required>
+                <button class="au-pw__btn" type="button" aria-label="Show password" aria-pressed="false"><i class="fa-solid fa-eye" aria-hidden="true"></i></button>
+              </div>
+              <p class="au-err" id="auPasswordErr" aria-live="polite" hidden></p>
+            </div>
+
+            <div class="au-field">
+              <label class="au-label" for="auConfirm">Re-enter password</label>
+              <div class="au-pw">
+                <input class="au-input au-input--pw" id="auConfirm" name="confirm" type="password" placeholder="Re-enter your password"
+                autocomplete="new-password" maxlength="64" data-rule="confirm" aria-describedby="auConfirmErr" required>
+                <button class="au-pw__btn" type="button" aria-label="Show password" aria-pressed="false"><i class="fa-solid fa-eye" aria-hidden="true"></i></button>
+              </div>
+              <p class="au-err" id="auConfirmErr" aria-live="polite" hidden></p>
+            </div>
+
+            <div class="au-field au-terms">
+              <label class="au-check">
+                <input type="checkbox" id="auTerms" name="terms" data-rule="terms" aria-describedby="auTermsErr" required>
+                <span class="au-check__box" aria-hidden="true"></span>
+                <span class="au-check__text">I have read and agree to the <a href="404.html">Terms and conditions</a></span>
+              </label>
+              <p class="au-err" id="auTermsErr" aria-live="polite" hidden></p>
+            </div>
+          </div>
+
+          <button class="au-btn" id="auSubmit" type="submit"><span class="au-btn__txt">Signup</span></button>
+
+          <p class="au-or">Or continue with</p>
+
+          <div class="au-socials">
+            <a class="au-social au-social--apple" href="404.html">
+              <i class="fa-brands fa-apple" aria-hidden="true"></i>
+              <span>Login with Apple</span>
+            </a>
+            <a class="au-social au-social--google" href="404.html">
+              <i class="fa-brands fa-google" aria-hidden="true"></i>
+              <span>Login with Google</span>
+            </a>
+          </div>
+
+          <p class="au-switch"><span>Already have an account?</span> <a href="login.html">Login</a></p>
+        </form>
+      </section>
+    </div>
+
+    <a class="au-home" href="index.html">
+      <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
+      Back to home
+    </a>
+  </main>
+
+  <script src="assets/js/auth.js"></script>
+</body>
+
+</html>

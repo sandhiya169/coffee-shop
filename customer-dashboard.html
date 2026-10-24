@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Overview | Stackly Customer Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Zen+Maru+Gothic:wght@400;500;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/dashboard.css">
+</head>
+
+<body class="cf cf-db" data-role="customer">
+  <script>document.documentElement.classList.add('js')</script>
+  <a class="db-skip" href="#dbView">Skip to content</a>
+
+  <div class="db">
+    <!-- SIDEBAR -->
+    <aside class="db-side" id="dbSide" aria-label="Dashboard sidebar">
+      <a href="customer-dashboard.html" class="cf-logo db-side__logo"><img src="assets/images/stackly-logo.webp" alt="Stackly" width="158"
+          height="65"></a>
+
+      <div class="db-side__who">
+        <span class="db-user__av" data-db-initial aria-hidden="true">G</span>
+        <span><small>Customer account</small><b data-db-email>guest@stackly.com</b></span>
+      </div>
+
+      <nav class="db-nav" aria-label="Customer menu">
+        <a href="#overview" data-panel="overview" class="is-active" aria-current="page"><i class="fa-solid fa-mug-hot"
+            aria-hidden="true"></i>Overview</a>
+        <a href="#orders" data-panel="orders" data-title="My Orders"><i class="fa-solid fa-bag-shopping"
+            aria-hidden="true"></i>My Orders</a>
+        <a href="#favourites" data-panel="favourites"><i class="fa-solid fa-heart" aria-hidden="true"></i>Favourites</a>
+        <a href="#rewards" data-panel="rewards"><i class="fa-solid fa-gift" aria-hidden="true"></i>Rewards</a>
+      </nav>
+
+      <div class="db-side__foot">
+        <a href="index.html" class="db-btn"><i class="fa-solid fa-house" aria-hidden="true"></i>Back to Home</a>
+        <a href="login.html" class="db-btn db-btn--ghost" data-db-logout><i class="fa-solid fa-arrow-right-from-bracket"
+            aria-hidden="true"></i>Logout</a>
+      </div>
+    </aside>
+    <div class="db-scrim" id="dbScrim"></div>
+
+    <!-- MAIN -->
+    <div class="db-main">
+      <header class="db-top">
+        <button class="db-burger" id="dbBurger" type="button" aria-label="Open menu" aria-expanded="false"
+          aria-controls="dbSide"><span></span></button>
+        <h1 class="cf-display db-top__title" id="dbTitle" aria-live="polite">Overview</h1>
+        <a href="404.html" class="db-iconbtn" aria-label="Notifications"><i class="fa-regular fa-bell"
+            aria-hidden="true"></i></a>
+        <div class="db-user" title="guest@stackly.com">
+          <span class="db-user__av" data-db-initial aria-hidden="true">G</span>
+          <span class="db-user__txt"><small>Customer</small><b data-db-email>guest@stackly.com</b></span>
+        </div>
+      </header>
+
+      <main class="db-view" id="dbView">
+
+        <!-- ============ OVERVIEW ============ -->
+        <div class="db-panel is-on" id="overview">
+          <div class="db-ph">
+            <h2 class="cf-display">Welcome back, <span data-db-name>there</span>.</h2>
+            <p>Your cup, your points and what we think you'll order next, all in one place.</p>
+          </div>
+
+          <section class="db-sec" aria-labelledby="ov1">
+            <div class="db-sec__h">
+              <h3 class="cf-display" id="ov1">Your order right now</h3>
+              <a href="404.html" class="cf-link">Order details</a>
+            </div>
+            <article class="db-now">
+              <div>
+                <p class="db-now__id">Order #ST-2481, being poured</p>
+                <h4>Your Honey Cardamom Latte is on the bar.</h4>
+                <p>Ready for pickup in about 6 minutes at 24 Roastery Lane.</p>
+                <ol class="db-track" aria-label="Order progress">
+                  <li class="is-done">Placed</li>
+                  <li class="is-done">Ground</li>
+                  <li class="is-now">Brewing</li>
+                  <li>Ready</li>
+                </ol>
+                <a href="404.html" class="db-btn">Track my order</a>
+              </div>
+              <div class="db-now__media">
+                <img src="assets/images/hero-latte.webp" alt="Latte art coffee set" width="526" height="526">
+              </div>
+            </article>
+          </section>
+
+          <section class="db-sec" aria-labelledby="ov2">
+            <div class="db-sec__h">
+              <h3 class="cf-display" id="ov2">Your month in coffee</h3>
+              <a href="404.html" class="cf-link">Full activity</a>
+            </div>
+            <div class="db-stats">
+              <div class="db-stat db-stat--brown"><b>1,240</b><span>Loyalty points</span><em>260 to your next free drink</em></div>
+              <div class="db-stat"><b>14</b><span>Orders in October</span><em class="db-up">4 more than September</em></div>
+              <div class="db-stat db-stat--gold"><b>2</b><span>Free drinks waiting</span><em>Expire 30 Nov</em></div>
+            </div>
+          </section>
+
+          <section class="db-sec" aria-labelledby="ov3">
+            <div class="db-sec__h">
+              <h3 class="cf-display" id="ov3">Picked for you</h3>
+              <a href="404.html" class="cf-link">See the full menu</a>
+              <p>Based on the drinks you reorder most.</p>
+            </div>
+            <div class="db-cups">
+              <article class="db-cupc">
+                <div class="db-cupc__img"><img src="assets/images/cup-caramel.webp" alt="Caramel Bloom Latte" width="356"
+                    height="442" loading="lazy"></div>
+                <h4>Caramel Bloom Latte</h4>
+                <p>Double espresso, silky milk and house-made burnt caramel.</p>
+                <div class="db-cupc__row"><span class="db-price">₹260</span><a href="404.html"
+                    class="db-btn db-btn--sm">Add to order</a></div>
+              </article>
+              <article class="db-cupc">
+                <div class="db-cupc__img"><img src="assets/images/cup-sage.webp" alt="Sage and Honey Flat White"
+                    width="356" height="354" loading="lazy"></div>
+                <h4>Sage &amp; Honey Flat White</h4>
+                <p>Wildflower honey and a whisper of fresh sage over ristretto.</p>
+                <div class="db-cupc__row"><span class="db-price">₹280</span><a href="404.html"
+                    class="db-btn db-btn--sm">Add to order</a></div>
+              </article>
+              <article class="db-cupc">
+                <div class="db-cupc__img"><img src="assets/images/cup-cortado.webp" alt="Midnight Cortado" width="356"
+                    height="406" loading="lazy"></div>
+                <h4>Midnight Cortado</h4>
+                <p>Dark-roast espresso cut with warm milk. Cocoa and molasses.</p>
+                <div class="db-cupc__row"><span class="db-price">₹210</span><a href="404.html"
+                    class="db-btn db-btn--sm">Add to order</a></div>
+              </article>
+            </div>
+          </section>
+        </div>
+
+        <!-- ============ MY ORDERS ============ -->
+        <div class="db-panel" id="orders">
+          <div class="db-ph">
+            <h2 class="cf-display">My orders</h2>
+            <p>Follow what's brewing, look back at past orders and reorder a favourite without starting over.</p>
+          </div>
+
+          <section class="db-sec" aria-labelledby="or1">
+            <div class="db-sec__h">
+              <h3 class="cf-display" id="or1">Active order</h3>
+            </div>
+            <div class="db-split">
+              <article class="db-card db-card--brown">
+                <span class="db-tag db-tag--gold">Brewing</span>
+                <h4 class="cf-display" style="font-size:var(--cf-fs-h3);margin:12px 0 6px;line-height:1.1">Order
+                  #ST-2481</h4>
+                <p style="color:rgba(255,255,255,.85)">Honey Cardamom Latte, Almond croissant. Pickup at the counter,
+                  name on the cup.</p>
+                <div class="db-meter" style="--v:66%;margin:22px 0 10px;background:rgba(255,255,255,.18)"><i></i></div>
+                <p style="font-size:var(--cf-fs-sm);color:rgba(255,255,255,.8)">About 6 minutes left</p>
+              </article>
+              <article class="db-card">
+                <dl class="db-dl" style="grid-template-columns:1fr 1fr">
+                  <div><dt>Total</dt><dd>₹410</dd></div>
+                  <div><dt>Paid with</dt><dd>UPI</dd></div>
+                  <div><dt>Placed</dt><dd>8:42 am</dd></div>
+                  <div><dt>Pickup</dt><dd>24 Roastery Lane</dd></div>
+                </dl>
+                <div class="db-chips" style="margin-bottom:0">
+                  <a href="404.html" class="db-btn db-btn--sm">Track order</a>
+                  <a href="404.html" class="db-btn db-btn--sm db-btn--line">Contact the café</a>
+                </div>
+              </article>
+            </div>
+          </section>
+
+          <section class="db-sec" aria-labelledby="or2">
+            <div class="db-sec__h">
+              <h3 class="cf-display" id="or2">Order history</h3>
+              <a href="404.html" class="cf-link">Download receipts</a>
+            </div>
+            <div class="db-tablewrap">
+              <table class="db-table">
+                <thead>
+                  <tr><th scope="col">Order</th><th scope="col">Items</th><th scope="col">Date</th><th scope="col">Total</th><th scope="col">Status</th><th scope="col"><span class="sr-only" style="position:absolute;left:-9999px">Action</span></th></tr>
+                </thead>
+                <tbody>
+                  <tr><td class="db-id" data-label="Order">#ST-2481</td><td data-label="Items">Honey Cardamom Latte, Almond croissant</td><td data-label="Date">Today, 8:42 am</td><td data-label="Total">₹410</td><td data-label="Status"><span class="db-tag db-tag--gold">Brewing</span></td><td data-label=""><a href="404.html" class="db-btn db-btn--sm db-btn--line">View</a></td></tr>
+                  <tr><td class="db-id" data-label="Order">#ST-2466</td><td data-label="Items">2× Sage &amp; Honey Flat White</td><td data-label="Date">Wed, 14 Oct</td><td data-label="Total">₹560</td><td data-label="Status"><span class="db-tag">Picked up</span></td><td data-label=""><a href="404.html" class="db-btn db-btn--sm db-btn--line">View</a></td></tr>
+                  <tr><td class="db-id" data-label="Order">#ST-2439</td><td data-label="Items">Midnight Cortado</td><td data-label="Date">Sun, 11 Oct</td><td data-label="Total">₹210</td><td data-label="Status"><span class="db-tag">Picked up</span></td><td data-label=""><a href="404.html" class="db-btn db-btn--sm db-btn--line">View</a></td></tr>
+                  <tr><td class="db-id" data-label="Order">#ST-2410</td><td data-label="Items">Cold brew, 250 g Ethiopia beans</td><td data-label="Date">Thu, 8 Oct</td><td data-label="Total">₹1,090</td><td data-label="Status"><span class="db-tag">Delivered</span></td><td data-label=""><a href="404.html" class="db-btn db-btn--sm db-btn--line">View</a></td></tr>
+                  <tr><td class="db-id" data-label="Order">#ST-2388</td><td data-label="Items">Caramel Bloom Latte</td><td data-label="Date">Mon, 5 Oct</td><td data-label="Total">₹260</td><td data-label="Status"><span class="db-tag db-tag--line">Cancelled</span></td><td data-label=""><a href="404.html" class="db-btn db-btn--sm db-btn--line">View</a></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          <section class="db-sec" aria-labelledby="or3">
+            <div class="db-sec__h">
+              <h3 class="cf-display" id="or3">Order it again</h3>
+              <p>Your most repeated orders, ready to go.</p>
+            </div>
+            <div class="db-reorder">
+              <article class="db-card"><span class="db-round"><i class="fa-solid fa-mug-hot" aria-hidden="true"></i></span>
+                <div><h4>Honey Cardamom Latte</h4><p>Ordered 9 times</p></div><a href="404.html" class="db-btn db-btn--sm">Reorder</a></article>
+              <article class="db-card"><span class="db-round"><i class="fa-solid fa-mug-saucer" aria-hidden="true"></i></span>
+                <div><h4>Sage &amp; Honey Flat White</h4><p>Ordered 6 times</p></div><a href="404.html" class="db-btn db-btn--sm">Reorder</a></article>
+              <article class="db-card"><span class="db-round"><i class="fa-solid fa-glass-water" aria-hidden="true"></i></span>
+                <div><h4>Cold brew</h4><p>Ordered 4 times</p></div><a href="404.html" class="db-btn db-btn--sm">Reorder</a></article>
+            </div>
+          </section>
+        </div>
+
+        <!-- ============ FAVOURITES ============ -->
+        <div class="db-panel" id="favourites">
+          <div class="db-ph">
+            <h2 class="cf-display">Favourites</h2>
+            <p>The drinks you keep coming back to, how you like them made and the beans you take home.</p>
+          </div>
+
+          <section class="db-sec" aria-labelledby="fv1">
+            <div class="db-sec__h">
+              <h3 class="cf-display" id="fv1">Saved drinks</h3>
+              <a href="404.html" class="cf-link">Browse the menu</a>
+            </div>
+            <div class="db-favs">
+              <article class="db-fav"><i class="fa-solid fa-heart" aria-hidden="true"></i>
+                <div class="db-fav__img"><img src="assets/images/cup-caramel.webp" alt="Caramel Bloom Latte" width="356" height="442" loading="lazy"></div>
+                <div><h4>Caramel Bloom Latte</h4><p>Oat milk, one extra shot</p><a href="404.html" class="db-btn db-btn--sm">Order now</a></div>
+              </article>
+              <article class="db-fav"><i class="fa-solid fa-heart" aria-hidden="true"></i>
+                <div class="db-fav__img"><img src="assets/images/cup-sage.webp" alt="Sage and Honey Flat White" width="356" height="354" loading="lazy"></div>
+                <div><h4>Sage &amp; Honey Flat White</h4><p>Whole milk, extra hot</p><a href="404.html" class="db-btn db-btn--sm">Order now</a></div>
+              </article>
+              <article class="db-fav"><i class="fa-solid fa-heart" aria-hidden="true"></i>
+                <div class="db-fav__img"><img src="assets/images/cup-cortado.webp" alt="Midnight Cortado" width="356" height="406" loading="lazy"></div>
+                <div><h4>Midnight Cortado</h4><p>Served as it comes</p><a href="404.html" class="db-btn db-btn--sm">Order now</a></div>
+              </article>
+            </div>
+          </section>
+
+          <section class="db-sec" aria-labelledby="fv2">
+            <div class="db-sec__h">
+              <h3 class="cf-display" id="fv2">Your taste profile</h3>
+              <p>Built from your last 14 orders.</p>
+            </div>
+            <div class="db-card">
+              <ul class="db-taste">
+                <li><div>Sweetness <span>Medium-high</span></div><div class="db-meter" style="--v:70%"><i></i></div></li>
+                <li><div>Roast depth <span>Medium</span></div><div class="db-meter" style="--v:55%"><i></i></div></li>
+                <li><div>Milk in the cup <span>Mostly milk drinks</span></div><div class="db-meter" style="--v:80%"><i></i></div></li>
+                <li><div>Caffeine <span>One to two shots</span></div><div class="db-meter" style="--v:45%"><i></i></div></li>
+              </ul>
+            </div>
+          </section>
+
+          <section class="db-sec" aria-labelledby="fv3">
+            <div class="db-sec__h">
+              <h3 class="cf-display" id="fv3">Beans at home</h3>
+            </div>
+            <article class="db-card db-card--brown db-sub">
+              <span class="db-tag db-tag--gold">Active plan</span>
+              <h4>Ethiopia Guji, 250 g</h4>
+              <p>Stone fruit, honey and a clean finish. Roasted the week it ships.</p>
+              <dl>
+                <div><dt>Next bag ships</dt><dd>Fri, 24 Oct</dd></div>
+                <div><dt>Grind</dt><dd>Whole bean</dd></div>
+                <div><dt>Every</dt><dd>3 weeks</dd></div>
+              </dl>
+              <div class="db-sub__act">
+                <a href="404.html" class="db-btn">Manage plan</a>
+                <a href="404.html" class="db-btn db-btn--ghost">Skip a delivery</a>
+              </div>
+            </article>
+          </section>
+        </div>
+
+        <!-- ============ REWARDS ============ -->
+        <div class="db-panel" id="rewards">
+          <div class="db-ph">
+            <h2 class="cf-display">Rewards</h2>
+            <p>Every cup earns points. Spend them on drinks, beans and brewing classes.</p>
+          </div>
+
+          <section class="db-sec" aria-labelledby="rw1">
+            <div class="db-sec__h">
+              <h3 class="cf-display" id="rw1">Your points</h3>
+              <a href="404.html" class="cf-link">Points history</a>
+            </div>
+            <article class="db-card db-card--brown db-points">
+              <div class="db-ring" style="--p:83"><div><b>1,240</b><span>of 1,500</span></div></div>
+              <div>
+                <h4>260 points to your next free drink.</h4>
+                <p>You earn 10 points for every ₹100 spent, and double points on Tuesdays.</p>
+                <div class="db-facts"><span>Regular member</span><span>Member since Mar 2025</span></div>
+              </div>
+            </article>
+          </section>
+
+          <section class="db-sec" aria-labelledby="rw2">
+            <div class="db-sec__h">
+              <h3 class="cf-display" id="rw2">Rewards you can claim</h3>
+            </div>
+            <div class="db-rows">
+              <article class="db-row db-row--2"><div><h4>Free regular drink</h4><p>Any drink from the core menu</p></div>
+                <div class="db-row__end"><span class="db-row__val">500 pts</span><a href="404.html" class="db-btn db-btn--sm">Claim</a></div></article>
+              <article class="db-row db-row--2"><div><h4>250 g bag of beans</h4><p>Pick any single-origins roast</p></div>
+                <div class="db-row__end"><span class="db-row__val">900 pts</span><a href="404.html" class="db-btn db-btn--sm">Claim</a></div></article>
+              <article class="db-row db-row--2"><div><h4>Saturday brew class</h4><p>One seat, includes a bag to take home</p></div>
+                <div class="db-row__end"><span class="db-row__val">1,500 pts</span><a href="404.html" class="db-btn db-btn--sm db-btn--line">Save for later</a></div></article>
+            </div>
+          </section>
+
+          <section class="db-sec" aria-labelledby="rw3">
+            <div class="db-sec__h">
+              <h3 class="cf-display" id="rw3">Account details</h3>
+            </div>
+            <article class="db-card">
+              <dl class="db-dl">
+                <div><dt>Email</dt><dd data-db-email>guest@stackly.com</dd></div>
+                <div><dt>Home café</dt><dd>24 Roastery Lane</dd></div>
+                <div><dt>Name on the cup</dt><dd data-db-name>there</dd></div>
+                <div><dt>Usual milk</dt><dd>Oat</dd></div>
+              </dl>
+              <div class="db-chips">
+                <span class="db-tag db-tag--line">Pickup alerts on</span>
+                <span class="db-tag db-tag--line">Offers by email</span>
+              </div>
+              <a href="404.html" class="db-btn db-btn--line">Edit profile</a>
+            </article>
+          </section>
+        </div>
+
+      </main>
+    </div>
+  </div>
+
+  <script src="assets/js/dashboard.js"></script>
+</body>
+
+</html>

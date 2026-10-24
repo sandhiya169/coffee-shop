@@ -1,0 +1,927 @@
+/* ---------- TOKENS ---------- */
+.au {
+  --au-display: var(--cf-display);
+  --au-ui: var(--cf-body);
+  --au-form-font: var(--cf-body);
+  --au-input: var(--cf-fs-ui);
+  font-family: var(--au-ui)
+}
+
+
+.au--signup {
+  --au-top: clamp(104px, 8.4vw, 120px);
+  --au-bottom: 29px;
+  --au-wrap-w: 770px;
+  --au-head-gap: 40px;
+  --au-card-w: 615px;
+  --au-card-h: 739px;
+  --au-inner-w: 528px;
+  --au-title-gap: 11px;
+  --au-btn-h: 48px;
+  --au-box: 24px;
+  --au-box-gap: 14px;
+  --au-g1: 22px;
+  --au-g2: 33px;
+  --au-g3: 23px;
+  --au-g4: 49px
+}
+
+.au--login {
+  --au-top: clamp(106px, 8.5vw, 122px);
+  --au-bottom: 57px;
+  --au-wrap-w: 680px;
+  --au-head-gap: 24px;
+  --au-card-w: 606px;
+  --au-card-h: 704px;
+  --au-inner-w: 527px;
+  --au-title-gap: 0px;
+  --au-btn-h: 47px;
+  --au-box: 23px;
+  --au-box-gap: 13px;
+  --au-g1: 30px;
+  --au-g2: 39px;
+  --au-g3: 51px;
+  --au-g4: 42px
+}
+
+/* ---------- PAGE ---------- */
+.au-page {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  min-height: 100svh;
+  padding: clamp(32px, 5vw, 56px) 20px clamp(40px, 5vw, 60px);
+  overflow: hidden;
+  gap: 20px
+}
+
+.au-page::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 0
+}
+
+.au--login .au-page::before {
+  background-image: url('../images/coffee-shop.webp')
+}
+
+.au--signup .au-page::before {
+  background-image: url('../images/coffee-shop.webp')
+}
+
+.au-page::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg,
+      rgba(20, 10, 6, .75) 0%,
+      rgba(30, 14, 8, .60) 40%,
+      rgba(20, 10, 6, .75) 100%);
+  z-index: 0
+}
+
+.au-page > * {
+  position: relative;
+  z-index: 1
+}
+.au-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: clamp(110px, 14vw, 160px);
+  transition: transform .35s cubic-bezier(.22, .9, .3, 1)
+}
+
+.au-logo:hover,
+.au-logo:focus-visible {
+  transform: scale(1.05)
+}
+
+.au-logo img {
+  width: 100%;
+  height: auto;
+  display: block
+}
+
+/* ---------- WRAP ---------- */
+.au-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: var(--au-wrap-w)
+}
+
+/* ---------- BACK TO HOME ---------- */
+.au-home {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 8px;
+  padding: 10px 24px;
+  border-radius: 999px;
+  border: 1.5px solid rgba(255, 255, 255, .35);
+  background: rgba(255, 255, 255, .08);
+  backdrop-filter: blur(8px);
+  color: rgba(255, 255, 255, .9);
+  font: 500 var(--cf-fs-ui) / 1 var(--au-ui);
+  letter-spacing: .02em;
+  transition: background .25s, border-color .25s, color .25s, transform .25s
+}
+
+.au-home i {
+  font-size: 13px;
+  color: var(--cf-gold);
+  transition: transform .25s
+}
+
+.au-home:hover,
+.au-home:focus-visible {
+  background: rgba(255, 255, 255, .16);
+  border-color: rgba(255, 255, 255, .6);
+  color: #fff;
+  transform: translateY(-2px)
+}
+
+.au-home:hover i {
+  transform: translateX(-3px)
+}
+
+/* ---------- HEADING ---------- */
+.au-head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-bottom: var(--au-head-gap);
+  text-align: center;
+  gap: 10px
+}
+
+.au-title {
+  width: 100%;
+  font: 500 var(--cf-fs-h2) / 1.2 var(--au-display);
+  color: #fff;
+  text-wrap: balance;
+  margin: 0;
+  text-shadow: 0 2px 16px rgba(0, 0, 0, .55)
+}
+
+.au-sub {
+  width: 100%;
+  font: 400 var(--cf-p-size) / var(--cf-p-lh) var(--au-ui);
+  color: rgba(255, 255, 255, .8);
+  margin: 0;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, .4)
+}
+
+.au--signup .au-head {
+  gap: 10px;
+  margin-bottom: var(--au-head-gap)
+}
+
+/* ---------- CARD ---------- */
+.au-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: min(100%, var(--au-card-w));
+  padding: clamp(28px, 4vw, 44px) clamp(20px, 4vw, 40px);
+  border-radius: 24px;
+  background: var(--cf-brown);
+  color: #fff;
+  box-shadow:
+    0 32px 80px rgba(0, 0, 0, .6),
+    0 0 0 1px rgba(255, 255, 255, .07),
+    inset 0 1px 0 rgba(255, 255, 255, .12)
+}
+
+.au-card__title {
+  width: 100%;
+  margin-bottom: 20px;
+  font: 500 var(--cf-fs-h2) / 1.2 var(--au-display);
+  text-align: center;
+  color: #fff;
+  letter-spacing: .01em
+}
+
+.au-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: var(--au-inner-w)
+}
+
+.au-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%
+}
+
+/* ---------- FIELDS ---------- */
+.au-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%
+}
+
+.au-label {
+  font: 500 var(--cf-fs-tag) / normal var(--au-ui);
+  color: rgba(255, 255, 255, .88);
+  letter-spacing: .03em;
+  text-transform: uppercase
+}
+
+.au-input {
+  width: 100%;
+  padding: 13px 16px;
+  border: 1.5px solid rgba(255, 255, 255, .2);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, .94);
+  color: var(--cf-dark);
+  font: 400 var(--cf-fs-ui) / normal var(--au-form-font);
+  transition: border-color .2s, box-shadow .2s, background .2s
+}
+
+.au-input::placeholder {
+  color: rgba(56, 37, 31, .55);
+  opacity: 1
+}
+
+.au-input:hover {
+  background: #fff
+}
+
+.au .au-input:focus,
+.au .au-input:focus-visible {
+  outline: none;
+  background: #fff;
+  border-color: var(--cf-gold);
+  box-shadow: 0 0 0 3px rgba(223, 170, 87, .3)
+}
+
+.au .au-input[aria-invalid="true"] {
+  border-color: var(--cf-dark);
+  box-shadow: 0 0 0 3px rgba(56, 37, 31, .35)
+}
+
+/* ---------- SHOW / HIDE PASSWORD ---------- */
+.au-pw {
+  position: relative;
+  width: 100%
+}
+
+.au-input--pw {
+  padding-right: 52px
+}
+
+.au-pw__btn {
+  position: absolute;
+  top: 50%;
+  right: 6px;
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  transform: translateY(-50%);
+  border-radius: 8px;
+  color: rgba(56, 37, 31, .6);
+  font-size: var(--cf-fs-ui);
+  cursor: pointer;
+  transition: color .2s, background .2s
+}
+
+.au-pw__btn:hover,
+.au-pw__btn:focus-visible,
+.au-pw__btn[aria-pressed="true"] {
+  color: var(--cf-dark)
+}
+
+.au-pw__btn:hover {
+  background: rgba(56, 37, 31, .08)
+}
+
+/* validation message */
+.au-err {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  width: fit-content;
+  max-width: 100%;
+  padding: 4px 10px;
+  border-radius: 8px;
+  background: var(--cf-cream);
+  font: 500 var(--cf-fs-tag) / 1.4 var(--au-ui);
+  color: var(--cf-dark);
+  animation: au-pop .25s ease-out
+}
+
+.au-err[hidden] {
+  display: none
+}
+
+.au-err::before {
+  content: "!";
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 16px;
+  height: 16px;
+  margin-top: 1px;
+  border-radius: 50%;
+  background: var(--cf-dark);
+  color: #fff;
+  font: 700 var(--cf-fs-tag) / 1 var(--au-ui)
+}
+
+/* ---------- ROLE (Customer / Admin) ---------- */
+.au-role {
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0
+}
+
+.au-role .au-label {
+  display: block;
+  padding: 0;
+  margin-bottom: 8px
+}
+
+.au-role__opts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px
+}
+
+.au-role__opt {
+  position: relative;
+  display: block;
+  cursor: pointer
+}
+
+.au-role__opt input {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 1
+}
+
+.au-role__pill {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  height: 48px;
+  border: 1.5px solid rgba(255, 255, 255, .2);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, .08);
+  color: #fff;
+  font: 500 var(--cf-fs-tag) / 1 var(--au-ui);
+  transition: background .2s, border-color .2s, color .2s, box-shadow .2s, transform .2s
+}
+
+.au-role__pill i {
+  font-size: 15px;
+  color: var(--cf-gold);
+  transition: color .2s
+}
+
+.au-role__opt:hover .au-role__pill {
+  background: rgba(255, 255, 255, .16);
+  border-color: rgba(255, 255, 255, .45)
+}
+
+.au-role__opt input:checked + .au-role__pill {
+  background: linear-gradient(135deg, #ecc06b, #dfaa57 55%, #c98f3c);
+  border-color: var(--cf-gold);
+  color: var(--cf-dark);
+  font-weight: 700;
+  box-shadow: 0 6px 16px rgba(223, 170, 87, .35)
+}
+
+.au-role__opt input:checked + .au-role__pill i {
+  color: var(--cf-dark)
+}
+
+.au .au-role__opt input:focus-visible + .au-role__pill {
+  outline: 2px solid var(--cf-gold);
+  outline-offset: 2px
+}
+
+/* ---------- CHECKBOX ROWS ---------- */
+.au-terms {
+  margin-top: 3px
+}
+
+.au-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 8px 16px;
+  margin-top: 4px
+}
+
+.au-check {
+  position: relative;
+  display: inline-flex;
+  align-items: flex-start;
+  gap: var(--au-box-gap);
+  cursor: pointer;
+  color: #fff
+}
+
+.au--signup .au-check {
+  align-items: center
+}
+
+.au-check input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: var(--au-box);
+  height: var(--au-box);
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 1
+}
+
+.au-check__box {
+  position: relative;
+  flex: none;
+  width: var(--au-box);
+  height: var(--au-box);
+  border: 1px solid #fff;
+  border-radius: 5px;
+  transition: background .2s, border-color .2s, box-shadow .2s
+}
+
+.au-check__box::after {
+  content: "";
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  width: 6px;
+  height: 11px;
+  border: solid var(--cf-gold);
+  border-width: 0 2.5px 2.5px 0;
+  transform: translate(-50%, -55%) rotate(45deg) scale(0);
+  transition: transform .25s cubic-bezier(.34, 1.56, .64, 1)
+}
+
+.au-check input:checked+.au-check__box {
+  background: #fff
+}
+
+.au-check input:checked+.au-check__box::after {
+  transform: translate(-50%, -55%) rotate(45deg) scale(1)
+}
+
+.au-check input:focus-visible+.au-check__box {
+  box-shadow: 0 0 0 4px rgba(56, 37, 31, .35)
+}
+
+.au-check input[aria-invalid="true"]+.au-check__box {
+  border-color: var(--cf-dark);
+  box-shadow: 0 0 0 3px rgba(56, 37, 31, .35)
+}
+
+.au-check__text {
+  font: 400 var(--cf-fs-ui) / normal var(--au-ui)
+}
+
+.au--signup .au-check__text {
+  font: 400 var(--cf-fs-ui) / normal var(--au-ui)
+}
+
+.au-check__text a,
+.au-link {
+  text-decoration: underline;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  transition: opacity .2s
+}
+
+.au-check__text a:hover,
+.au-link:hover {
+  opacity: .8
+}
+
+.au-link {
+  font: 400 var(--cf-fs-ui) / normal var(--au-ui);
+  color: #fff
+}
+
+/* ---------- BUTTON ---------- */
+.au-btn {
+  --cf-fill: var(--cf-dark);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 50px;
+  margin-top: 20px;
+  padding: 10px;
+  overflow: hidden;
+  isolation: isolate;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #ecc06b, #dfaa57 55%, #c98f3c);
+  color: var(--cf-dark);
+  font: 700 var(--cf-fs-ui) / normal var(--au-form-font);
+  box-shadow: 0 8px 22px rgba(223, 170, 87, .35);
+  transition: transform .3s, box-shadow .3s
+}
+
+.au-btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: var(--cf-fill);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform .45s cubic-bezier(.65, 0, .35, 1)
+}
+
+.au-btn:hover,
+.au-btn:focus-visible {
+  transform: translateY(-2px);
+  color: var(--cf-cream);
+  box-shadow: 0 12px 28px rgba(56, 37, 31, .35)
+}
+
+.au-btn:hover::before,
+.au-btn:focus-visible::before {
+  transform: scaleX(1);
+  transform-origin: left
+}
+
+.au-btn:active {
+  transform: translateY(0) scale(.98)
+}
+
+.au-btn[disabled] {
+  pointer-events: none;
+  opacity: .75
+}
+
+/* ---------- SOCIAL ---------- */
+.au-or {
+  margin-top: clamp(20px, 3vw, 28px);
+  font: 400 var(--cf-fs-ui) / normal var(--au-ui);
+  text-align: center;
+  color: #fff
+}
+
+.au-socials {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  width: 100%;
+  max-width: 440px;
+  margin-top: clamp(18px, 2.5vw, 24px)
+}
+
+.au-social {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex: 1 1 0;
+  min-width: 0;
+  height: 44px;
+  padding: 0 16px;
+  border-radius: 10px;
+  background: #fff;
+  color: #000;
+  font: 500 var(--cf-fs-sm) / normal var(--au-ui);
+  text-decoration: none;
+  white-space: nowrap;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, .14);
+  transition: transform .25s ease, box-shadow .25s ease, background-color .25s ease
+}
+
+.au-social i {
+  flex: none;
+  font-size: 19px;
+  transition: transform .3s cubic-bezier(.34, 1.56, .64, 1)
+}
+
+.au-social--apple i {
+  color: #000
+}
+
+.au-social--google i {
+  color: var(--cf-dark)
+}
+
+.au-social:hover,
+.au-social:focus-visible {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(56, 37, 31, .32);
+  background: #fafafa
+}
+
+.au-social:hover i,
+.au-social:focus-visible i {
+  transform: scale(1.15)
+}
+
+.au-social:active {
+  transform: translateY(0) scale(.98)
+}
+
+/* ---------- SWITCH LINK ---------- */
+.au-switch {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 4px 10px;
+  margin-top: var(--au-g4);
+  font: 400 var(--cf-fs-ui) / normal var(--au-ui);
+  color: #fff
+}
+
+.au-switch a {
+  color: var(--cf-cream);
+  text-decoration: underline;
+  text-underline-position: from-font;
+  transition: opacity .2s
+}
+
+.au-switch a:hover {
+  opacity: .8
+}
+
+.au .au-card :focus-visible {
+  outline: 2px solid var(--cf-dark);
+  outline-offset: 2px
+}
+
+.au .au-logo:focus-visible {
+  outline: 2px solid var(--cf-dark);
+  outline-offset: 4px;
+  border-radius: 4px
+}
+
+/* ---------- MOTION ---------- */
+@keyframes au-rise {
+  from {
+    opacity: 0;
+    transform: translateY(26px)
+  }
+
+  to {
+    opacity: 1;
+    transform: none
+  }
+}
+
+@keyframes au-pop {
+  from {
+    opacity: 0;
+    transform: translateY(-4px)
+  }
+
+  to {
+    opacity: 1;
+    transform: none
+  }
+}
+
+@keyframes au-shake {
+
+  20%,
+  60% {
+    transform: translateX(-8px)
+  }
+
+  40%,
+  80% {
+    transform: translateX(8px)
+  }
+}
+
+@keyframes au-spin {
+  to {
+    transform: rotate(360deg)
+  }
+}
+
+.au-logo,
+.au-title,
+.au-sub,
+.au-card,
+.au-home {
+  animation: au-rise .8s cubic-bezier(.22, .9, .3, 1) both
+}
+
+.au-logo {
+  animation-delay: .05s
+}
+
+.au-title {
+  animation-delay: .15s
+}
+
+.au-sub {
+  animation-delay: .27s
+}
+
+.au-card {
+  animation-delay: .4s
+}
+
+.au-card__title,
+.au-form>*,
+.au-fields>* {
+  animation: au-rise .6s cubic-bezier(.22, .9, .3, 1) both
+}
+
+.au-card__title {
+  animation-delay: .6s
+}
+
+.au-fields>:nth-child(1) {
+  animation-delay: .68s
+}
+
+.au-fields>:nth-child(2) {
+  animation-delay: .76s
+}
+
+.au-fields>:nth-child(3) {
+  animation-delay: .84s
+}
+
+.au-fields>:nth-child(4) {
+  animation-delay: .92s
+}
+
+.au-fields>:nth-child(5) {
+  animation-delay: 1s
+}
+
+.au-form>:nth-child(2) {
+  animation-delay: .9s
+}
+
+.au-form>:nth-child(3) {
+  animation-delay: .98s
+}
+
+.au-form>:nth-child(4) {
+  animation-delay: 1.06s
+}
+
+.au-form>:nth-child(5) {
+  animation-delay: 1.14s
+}
+
+.au-form>:nth-child(1) {
+  animation: none
+}
+
+.au-form.is-shake {
+  animation: au-shake .45s ease-in-out
+}
+
+.au-btn.is-loading {
+  gap: 10px
+}
+
+.au-btn.is-loading::after {
+  content: "";
+  width: 18px;
+  height: 18px;
+  border: 2px solid currentColor;
+  border-right-color: transparent;
+  border-radius: 50%;
+  animation: au-spin .7s linear infinite
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 760px) {
+  .au-br {
+    display: none
+  }
+}
+
+@media (max-width: 700px) {
+  .au {
+    --au-input: 16px;
+    --au-head-gap: 20px
+  }
+
+  .au-page {
+    padding-inline: 16px;
+    padding-bottom: 36px;
+    gap: 16px
+  }
+
+  .au-logo {
+    width: 110px
+  }
+
+  .au-card {
+    padding: 24px 18px 28px;
+    border-radius: 18px
+  }
+
+  .au-fields {
+    gap: 14px
+  }
+
+  .au-btn {
+    font-size: var(--cf-fs-ui);
+    height: 48px
+  }
+
+  .au-row {
+    margin-top: 8px
+  }
+
+  .au-role__opts {
+    gap: 10px
+  }
+
+  .au-role__pill {
+    height: 46px
+  }
+
+  .au-home {
+    font-size: var(--cf-fs-ui);
+    padding: 9px 20px
+  }
+}
+
+@media (max-width: 480px) {
+  .au-socials {
+    flex-direction: column;
+    width: 100%;
+    max-width: 320px;
+    gap: 12px
+  }
+
+  .au-social {
+    width: 100%;
+    flex: none;
+    height: 42px
+  }
+}
+
+@media (max-width: 380px) {
+  .au-social {
+    font-size: var(--cf-fs-sm)
+  }
+
+  .au-switch {
+    font-size: var(--cf-fs-ui)
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+  .au-logo,
+  .au-title,
+  .au-sub,
+  .au-card,
+  .au-card__title,
+  .au-form>*,
+  .au-fields>*,
+  .au-err,
+  .au-form.is-shake {
+    animation: none
+  }
+
+  .au-btn,
+  .au-btn::before,
+  .au-pw__btn,
+  .au-role__pill,
+  .au-social,
+  .au-social img,
+  .au-logo,
+  .au-check__box::after {
+    transition: none
+  }
+}

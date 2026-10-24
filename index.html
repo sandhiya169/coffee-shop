@@ -1,0 +1,546 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Stackly | Specialty Coffee - Small-Batch Roasters</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Zen+Maru+Gothic:wght@400;500;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body class="cf">
+  <script>document.documentElement.classList.add('js', 'cf-loading')</script>
+
+  <!-- PRELOADER -->
+  <div class="cf-preloader" id="cfPreloader" role="status" aria-live="polite" aria-label="Loading Stackly">
+    <div class="cf-preloader__in">
+      <span class="cf-preloader__steam" aria-hidden="true"><i></i><i></i><i></i></span>
+      <img class="cf-preloader__logo" src="assets/images/stackly-logo.webp" alt="Stackly">
+      <p class="cf-preloader__txt">Brewing your experience</p>
+      <span class="cf-preloader__bar" aria-hidden="true"><i></i></span>
+    </div>
+  </div>
+
+  <header class="cf-header">
+    <div class="cf-header__in">
+      <a href="index.html" class="cf-logo" aria-label="Stackly home"><img src="assets/images/stackly-logo.webp" alt="Stackly"></a>
+      <nav class="cf-nav" id="cfNav" aria-label="Main">
+        <a href="index.html" class="is-active">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="origins.html">Origins</a>
+        <a href="experience.html">Experience</a>
+        <a href="contact.html">Contact</a>
+        <a href="login.html" class="cf-btn cf-login cf-nav__login"><i class="fa-solid fa-user"></i> Login</a>
+      </nav>
+      <div class="cf-tools">
+        <a href="login.html" class="cf-btn cf-login"><i class="fa-solid fa-user"></i> Login</a>
+        <button class="cf-burger" id="cfBurger" aria-label="Menu" aria-expanded="false"
+          aria-controls="cfNav"><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="cf-hero" id="home">
+      <div class="cf-hero__fx" aria-hidden="true">
+        <span class="cf-hero__glow"></span>
+        <span class="cf-hero__orb cf-hero__orb--b"></span>
+      </div>
+      <div class="cf-wrap cf-hero__in">
+        <div class="cf-hero__text">
+          <p class="cf-eyebrow cf-hero__tag cf-anim" style="--d:.05s"><i
+              aria-hidden="true"></i>SPECIALTY COFFEE<span class="cf-hero__tag-rest"> - SMALL-BATCH
+              ROASTERS</span></p>
+          <h1 class="cf-display cf-h1 cf-h1--hero">
+            <span class="cf-anim" style="--d:.16s">Your Daily Dose of</span>
+            <span class="cf-h1__gold cf-anim" style="--d:.3s">Extraordinary</span>
+          </h1>
+          <p class="cf-lead cf-anim" style="--d:.44s">Single-origin beans, roasted slowly and poured with care —<br>so
+            every cup feels like a
+            small, well-kept secret.</p>
+          <div class="cf-actions cf-anim" style="--d:.58s">
+            <a href="menu.html" class="cf-btn">Explore The Menu 
+              <span class="cf-btn__icon"><i class="fa-solid fa-arrow-right" aria-hidden="true">
+              </i></span></a>
+            <a href="origins.html" class="cf-link--light cf-link--icon">Our Story 
+              <span class="cf-btn__icon"><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span></a>
+          </div>
+          <div class="cf-trust cf-anim" style="--d:.72s">
+            <div class="cf-trust__faces">
+              <img src="assets/images/avatar-1.webp" alt="" width="42" height="42">
+              <img src="assets/images/avatar-2.webp" alt="" width="42" height="42">
+              <img src="assets/images/avatar-3.webp" alt="" width="42" height="42">
+            </div>
+            <p><b><i class="fa-solid fa-star" aria-hidden="true"></i>4.9 out of 5</b><small>from 2,400+ regulars</small>
+            </p>
+          </div>
+        </div>
+        <div class="cf-hero__media">
+          <span class="cf-hero__ring" aria-hidden="true"></span>
+          <div class="cf-hero__par">
+            <div class="cf-hero__cup" data-aos="zoom-in" data-aos-delay="200" data-aos-duration="1000">
+              <img src="assets/images/hero.webp" alt="Latte art coffee set" width="526" height="526">
+              <span class="cf-hero__steam" aria-hidden="true"><i></i><i></i><i></i></span>
+            </div>
+          </div>
+          <div class="cf-pour">
+            <i class="fa-solid fa-mug-hot cf-pour__icon" aria-hidden="true"></i>
+            <span>Now pouring</span>
+            <strong class="cf-name">Honey Cardamom Latte</strong>
+            <small class="cf-pour__meta">Wildflower honey · green cardamom</small>
+          </div>
+        </div>
+      </div>
+      <span class="cf-hero__scroll" aria-hidden="true"></span>
+    </section>
+
+    <!-- THREE CUPS -->
+    <section class="cf-sec cf-sec--cream" id="menu">
+      <div class="cf-wrap">
+        <div class="cf-head">
+          <div data-aos="fade-right">
+            <p class="cf-eyebrow">SPECIALTY COFFEE - SMALL-BATCH ROASTERS</p>
+            <h2 class="cf-display cf-h2">Three cups worth<br><em>the detour.</em></h2>
+          </div>
+          <p class="cf-note" data-aos="fade-left" data-aos-delay="150">Our house favourites, built from one slow idea: honest ingredients, careful technique and a
+            single unexpected note.</p>
+        </div>
+        <div class="cf-cups">
+          <article class="cf-cup cf-cup--a" data-aos="zoom-in">
+            <figure class="cf-cup__media">
+              <img src="assets/images/coffee.webp" alt="Caramel Bloom Latte" width="356" height="442" loading="lazy">
+              <figcaption class="cf-cup__badge">Most loved</figcaption>
+            </figure>
+            <span class="cf-display cf-cup__idx" aria-hidden="true">01</span>
+            <h3 class="cf-display cf-h3">Caramel Bloom Latte</h3>
+            <p>Double espresso, silky milk and house-made burnt caramel. Warm, quietly sweet.</p>
+            <ul class="cf-cup__notes" aria-label="Tasting notes"><li>Caramel</li><li>Toasted almond</li><li>Vanilla</li></ul>
+            <a href="404.html" class="cf-btn">Discover <span class="cf-btn__icon"><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span></a>
+          </article>
+          <article class="cf-cup cf-cup--b" data-aos="zoom-in" data-aos-delay="150">
+            <figure class="cf-cup__media">
+              <img src="assets/images/honey.webp" alt="Sage and Honey Flat White" width="356" height="354" loading="lazy">
+              <figcaption class="cf-cup__badge">Signature</figcaption>
+            </figure>
+            <span class="cf-display cf-cup__idx" aria-hidden="true">02</span>
+            <h3 class="cf-display cf-h3">Sage &amp; Honey Flat White</h3>
+            <p>Wildflower honey and a whisper of fresh sage over rich, aromatic ristretto.</p>
+            <ul class="cf-cup__notes" aria-label="Tasting notes"><li>Honey</li><li>Sage</li><li>Stone fruit</li></ul>
+            <a href="404.html" class="cf-btn">Discover <span class="cf-btn__icon"><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span></a>
+          </article>
+          <article class="cf-cup cf-cup--c" data-aos="zoom-in" data-aos-delay="300">
+            <figure class="cf-cup__media">
+              <img src="assets/images/midnight.webp" alt="Midnight Cortado" width="356" height="406" loading="lazy">
+              <figcaption class="cf-cup__badge">Dark roast</figcaption>
+            </figure>
+            <span class="cf-display cf-cup__idx" aria-hidden="true">03</span>
+            <h3 class="cf-display cf-h3">Midnight Cortado</h3>
+            <p>Dark-roast espresso cut with warm milk. Cocoa, molasses, a clean finish.</p>
+            <ul class="cf-cup__notes" aria-label="Tasting notes"><li>Cocoa</li><li>Molasses</li></ul>
+            <a href="404.html" class="cf-btn">Discover <span class="cf-btn__icon"><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+            <!-- PHILOSOPHY -->
+    <section class="cf-sec cf-sec--tan cf-phil-sec" id="Origins">
+      <div class="cf-wrap">
+        <div class="cf-phil__layout">
+          <div class="cf-phil__left">
+            <div class="cf-phil__head" data-aos="fade-right">
+              <p class="cf-kicker">Our Philosophy</p>
+              <h2 class="cf-display cf-h2 cf-h2--dark">Coffee isn’t a rush.<br>It’s a ritual,<br>left to bloom.</h2>
+            </div>
+            <div class="cf-phil__items">
+              <div class="cf-pri" data-aos="fade-up">
+                <div class="cf-pri__num">01</div>
+                <div class="cf-pri__body">
+                  <h3 class="cf-display cf-h3">Sourced with respect</h3>
+                  <p>We work with growers we know by name, and pay for quality — not just volume.</p>
+                </div>
+              </div>
+              <div class="cf-pri" data-aos="fade-up" data-aos-delay="120">
+                <div class="cf-pri__num">02</div>
+                <div class="cf-pri__body">
+                  <h3 class="cf-display cf-h3">Roasted with patience</h3>
+                  <p>Small batches, roasted to bring out sweetness rather than smoke.</p>
+                </div>
+              </div>
+              <div class="cf-pri" data-aos="fade-up" data-aos-delay="240">
+                <div class="cf-pri__num">03</div>
+                <div class="cf-pri__body">
+                  <h3 class="cf-display cf-h3">Poured with care</h3>
+                  <p>Every cup is weighed, timed and tasted before it reaches you.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="cf-phil__art" data-aos="zoom-in" data-aos-delay="200" data-aos-duration="1000">
+            <img class="cf-splash" src="assets/images/splash.webp" alt="" loading="lazy">
+            <img class="cf-overhead" src="assets/images/latte-overhead.webp" alt="Overhead view of a latte art cup" loading="lazy">
+            <img class="cf-badge-art" src="assets/images/badge.webp" alt="" width="164" height="164">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BESTSELLERS -->
+    <section class="cf-sec cf-sec--dark">
+      <div class="cf-wrap">
+        <div class="cf-head cf-head--end">
+          <div data-aos="fade-right">
+            <p class="cf-kicker cf-kicker--gold">BESTSELLING DRINKS</p>
+            <h2 class="cf-display cf-h2 cf-h2--light">Most loved at <em>the</em><br><em>counter.</em></h2>
+          </div>
+          <div class="cf-filters" data-aos="fade-left" data-aos-delay="150" role="group" aria-label="Filter drinks">
+            <button class="cf-chip is-on" data-filter="all">All</button>
+            <button class="cf-chip" data-filter="iced">Iced</button>
+            <button class="cf-chip" data-filter="hot">Hot</button>
+          </div>
+        </div>
+        <div class="cf-menu" id="cfMenu">
+          <article class="cf-item cf-item--s" data-aos="fade-up" data-type="hot">
+            <img src="assets/images/oats.webp" alt="Oat Milk Flat White" loading="lazy">
+            <h3 class="cf-display cf-h3">Oat Milk Flat White</h3>
+            <p>Double ristretto, silky steamed oat milk and a thin cap of microfoam.</p>
+            <ul class="cf-notes" aria-label="Tasting notes"><li>Toasted oat</li><li>Cocoa</li><li>Silky</li></ul>
+            <div class="cf-item__row"><span class="cf-display cf-price">$5.25</span><span class="cf-serve">Hot · 8 oz</span></div>
+          </article>
+          <article class="cf-item cf-item--l" data-aos="fade-up" data-aos-delay="120" data-type="hot">
+            <img src="assets/images/caramel-latte.webp" alt="Caramel Bloom Latte" loading="lazy">
+            <h3 class="cf-display cf-h3">Caramel Bloom Latte</h3>
+            <p>Double ristretto, silky steamed oat milk and a thin cap of microfoam.</p>
+            <ul class="cf-notes" aria-label="Tasting notes"><li>Burnt caramel</li><li>Vanilla</li><li>Creamy</li></ul>
+            <div class="cf-item__row"><span class="cf-display cf-price">$5.25</span><span class="cf-serve">Hot · 12 oz</span></div>
+          </article>
+          <article class="cf-item cf-item--m" data-aos="fade-up" data-aos-delay="120" data-type="iced">
+            <img src="assets/images/honey.webp" alt="Honey Cardamom Cold Brew" loading="lazy">
+            <h3 class="cf-display cf-h3">Honey Cardamom Cold Brew</h3>
+            <p>Slow-steeped cold brew, wildflower honey and crushed cardamom.</p>
+            <ul class="cf-notes" aria-label="Tasting notes"><li>Wildflower honey</li><li>Cardamom</li><li>Smooth</li></ul>
+            <div class="cf-item__row"><span class="cf-display cf-price">$5.25</span><span class="cf-serve">Iced · 16 oz</span></div>
+          </article>
+          <article class="cf-item cf-item--m" data-aos="fade-up" data-aos-delay="120" data-type="iced">
+            <img src="assets/images/sage.webp" alt="Sage Tonic Espresso" loading="lazy">
+            <h3 class="cf-display cf-h3">Sage Tonic Espresso</h3>
+            <p>Espresso over sparkling tonic with fresh sage and orange peel.</p>
+            <ul class="cf-notes" aria-label="Tasting notes"><li>Fresh sage</li><li>Orange peel</li><li>Bright</li></ul>
+            <div class="cf-item__row"><span class="cf-display cf-price">$5.25</span><span class="cf-serve">Iced · 12 oz</span></div>
+          </article>
+          <article class="cf-item cf-item--l" data-aos="fade-up" data-aos-delay="120" data-type="hot">
+            <img src="assets/images/midnight.webp" alt="Midnight Cortado" loading="lazy">
+            <h3 class="cf-display cf-h3">Midnight Cortado</h3>
+            <p>Equal parts double espresso and warm milk, dark, clean and impossibly smooth.</p>
+            <ul class="cf-notes" aria-label="Tasting notes"><li>Dark chocolate</li><li>Roasted nut</li><li>Bold</li></ul>
+            <div class="cf-item__row"><span class="cf-display cf-price">$5.25</span><span class="cf-serve">Hot · 4 oz</span></div>
+          </article>
+          <article class="cf-item cf-item--s" data-aos="fade-up" data-aos-delay="120" data-type="hot">
+            <img src="assets/images/hazelnut.webp" alt="Hazelnut Cloud Latte" loading="lazy">
+            <h3 class="cf-display cf-h3">Hazelnut Cloud Latte</h3>
+            <p>Velvety steamed milk, toasted hazelnut and a double shot, finished with latte art.</p>
+            <ul class="cf-notes" aria-label="Tasting notes"><li>Hazelnut</li><li>Brown sugar</li><li>Mellow</li></ul>
+            <div class="cf-item__row"><span class="cf-display cf-price">$5.25</span><span class="cf-serve">Hot · 12 oz</span></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+<!-- BEAN TO CUP -->
+    <section class="cf-sec cf-sec--cream cf-steps-sec cf-trail-sec" id="experience">
+      <div class="cf-wrap">
+        <div class="cf-head cf-head--mid">
+          <div data-aos="fade-right">
+            <p class="cf-kicker cf-kicker--gold">BEAN TO CUP</p>
+            <h2 class="cf-display cf-h2 cf-h2--sm">Every cup has a long <em>road behind it.</em></h2>
+          </div>
+          <p class="cf-note cf-note--lg" data-aos="fade-left" data-aos-delay="150">Five quiet steps, each one handled with the same patience, from the first
+            harvest to the last pour.</p>
+        </div>
+        <ol class="cf-trail">
+          <li class="cf-trail__item" style="--d:0.00s" data-aos="fade-up">
+            <div class="cf-trail__num"><span class="cf-display cf-trail__n">1</span></div>
+            <figure class="cf-trail__art">
+              <img src="assets/images/coffee-origin.webp" alt="Coffee splash at the origin farm" loading="lazy" decoding="async">
+              <figcaption class="cf-trail__tag">Altitude</figcaption>
+            </figure>
+            <h3 class="cf-display cf-trail__t">Origin</h3>
+            <p class="cf-trail__p">Grown at altitude, slowly, where cool nights concentrate sweetness.</p>
+          </li>
+          <li class="cf-trail__item" style="--d:0.12s" data-aos="fade-up" data-aos-delay="100">
+            <div class="cf-trail__num"><span class="cf-display cf-trail__n">2</span></div>
+            <figure class="cf-trail__art">
+              <img src="assets/images/harvest.webp" alt="Sage Tonic Espresso, from carefully harvested beans" loading="lazy" decoding="async">
+              <figcaption class="cf-trail__tag">By hand</figcaption>
+            </figure>
+            <h3 class="cf-display cf-trail__t">Harvest</h3>
+            <p class="cf-trail__p">Ripe cherries are picked by hand, then washed and dried with care.</p>
+          </li>
+          <li class="cf-trail__item" style="--d:0.24s" data-aos="fade-up" data-aos-delay="200">
+            <div class="cf-trail__num"><span class="cf-display cf-trail__n">3</span></div>
+            <figure class="cf-trail__art">
+              <img src="assets/images/roast.webp" alt="Midnight Cortado from a small-batch roast" loading="lazy" decoding="async">
+              <figcaption class="cf-trail__tag">Small batch</figcaption>
+            </figure>
+            <h3 class="cf-display cf-trail__t">Roast</h3>
+            <p class="cf-trail__p">Small batches roasted to a profile built around each bean’s character.</p>
+          </li>
+          <li class="cf-trail__item" style="--d:0.36s" data-aos="fade-up" data-aos-delay="300">
+            <div class="cf-trail__num"><span class="cf-display cf-trail__n">4</span></div>
+            <figure class="cf-trail__art">
+              <img src="assets/images/bloom.webp" alt="Overhead view of a freshly bloomed latte" loading="lazy" decoding="async">
+              <figcaption class="cf-trail__tag">30 seconds</figcaption>
+            </figure>
+            <h3 class="cf-display cf-trail__t">Bloom</h3>
+            <p class="cf-trail__p">Hot water meets fresh grounds, letting the aroma open.</p>
+          </li>
+          <li class="cf-trail__item" style="--d:0.48s" data-aos="fade-up" data-aos-delay="400">
+            <div class="cf-trail__num"><span class="cf-display cf-trail__n">5</span></div>
+            <figure class="cf-trail__art">
+              <img src="assets/images/pour.webp" alt="Latte art coffee set, ready to pour" loading="lazy" decoding="async">
+              <figcaption class="cf-trail__tag">Served warm</figcaption>
+            </figure>
+            <h3 class="cf-display cf-trail__t">Pour</h3>
+            <p class="cf-trail__p">The last pour lands in your cup, finished by hand and served singing.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+            <!-- TESTIMONIALS -->
+    <section class="cf-sec cf-sec--tan cf-kind">
+      <div class="cf-wrap">
+        <div class="cf-kind__head">
+          <div data-aos="fade-right">
+            <p class="cf-kicker">KIND WORDS</p>
+            <h2 class="cf-display cf-h2 cf-h2--sm cf-h2--dark">Poured back to us.</h2>
+          </div>
+          <div class="cf-kind__dots" data-aos="fade-left" data-aos-delay="150" id="cfKindDots" aria-hidden="true">
+            <span class="cf-kind__dot is-on"></span>
+            <span class="cf-kind__dot"></span>
+            <span class="cf-kind__dot"></span>
+          </div>
+        </div>
+        <div class="cf-quotes">
+          <figure class="cf-quote cf-quote--big" id="cfQuoteBig" data-aos="fade-right" data-aos-duration="800" data-aos-delay="100">
+            <i class="fa-solid fa-quote-left cf-mark" aria-hidden="true"></i>
+            <blockquote>I came in for a quick flat white and stayed an hour. It's the first cafe where the coffee, the room and the people all feel considered.</blockquote>
+            <div class="cf-quote__stars" aria-label="5 stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <figcaption>
+              <img src="assets/images/avatar-1.webp" alt="" width="51" height="51">
+              <span><b>Sam</b>Weekday regular</span>
+            </figcaption>
+          </figure>
+          <div class="cf-quote__col">
+            <figure class="cf-quote cf-quote--card" id="cfQuoteCard1" data-aos="zoom-in" data-aos-duration="700" data-aos-delay="250">
+              <div class="cf-quote__stars" aria-label="5 stars">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              </div>
+              <blockquote>The Caramel Bloom Latte is dessert and breakfast at once. I've stopped ordering anything else.</blockquote>
+              <figcaption>
+                <img src="assets/images/avatar-2.webp" alt="" width="51" height="51">
+                <span><b>Meera</b>Weekday regular</span>
+              </figcaption>
+            </figure>
+            <figure class="cf-quote cf-quote--card" id="cfQuoteCard2" data-aos="zoom-in" data-aos-duration="700" data-aos-delay="420">
+              <div class="cf-quote__stars" aria-label="5 stars">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              </div>
+              <blockquote>Bought a bag of beans on a whim. My kitchen smells incredible and it's the best pour-over I've made at home.</blockquote>
+              <figcaption>
+                <img src="assets/images/avatar-3.webp" alt="" width="51" height="51">
+                <span><b>Sofia</b>Weekday regular</span>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- VISIT -->
+    <section class="cf-sec cf-sec--dark cf-visit" id="visit">
+      <div class="cf-visit__bg" aria-hidden="true"></div>
+      <div class="cf-wrap cf-visit__in">
+        <div class="cf-visit__text" data-aos="fade-right">
+          <p class="cf-kicker cf-kicker--gold">Come say hello</p>
+          <h2 class="cf-display cf-h2 cf-h2--sm cf-h2--light">Your seat is waiting.</h2>
+          <p class="cf-addr">
+            <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+            <span>Salem, Tamil Nadu, India.</span>
+          </p>
+          <ul class="cf-perks">
+            <li><i class="fa-solid fa-person-walking" aria-hidden="true"></i>Walk-ins welcome</li>
+            <li><i class="fa-solid fa-dog" aria-hidden="true"></i>Dogs welcome</li>
+            <li><i class="fa-solid fa-wifi" aria-hidden="true"></i>Free Wi-Fi</li>
+            <li><i class="fa-solid fa-mug-hot" aria-hidden="true"></i>Takeaway available</li>
+          </ul>
+          <div class="cf-hbox" data-aos="fade-up" data-aos-delay="150">
+            <div class="cf-hbox__top">
+              <h3 class="cf-hbox__t"><i class="fa-regular fa-clock" aria-hidden="true"></i>Opening Hours</h3>
+              <span class="cf-status" id="cfStatus" hidden><i aria-hidden="true"></i><b>Open now</b><span></span></span>
+            </div>
+            <dl class="cf-hours" id="cfHours">
+              <div data-days="1,2,3,4,5" data-open="7" data-close="20">
+                <dt>Monday – Friday</dt>
+                <dd>7:00 am – 8:00 pm</dd>
+              </div>
+              <div data-days="6" data-open="8" data-close="21">
+                <dt>Saturday</dt>
+                <dd>8:00 am – 9:00 pm</dd>
+              </div>
+              <div data-days="0" data-open="10" data-close="18">
+                <dt>Sunday</dt>
+                <dd>10:00 am – 6:00 pm</dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+        <div class="cf-visit__map" data-aos="fade-left" data-aos-delay="150">
+          <div class="cf-map__label"><i class="fa-solid fa-map-pin" aria-hidden="true"></i> Find us here</div>
+          <iframe
+            class="cf-map"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3910.8!2d78.1460!3d11.6643!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3babf1e1f3e5a6cd%3A0x1234567890abcdef!2sSalem%2C%20Tamil%20Nadu%2C%20India!5e0!3m2!1sen!2sin!4v1698000000000!5m2!1sen!2sin"
+            title="Stackly Roastery location in Salem, Tamil Nadu"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen
+            aria-label="Map showing Stackly Roastery in Salem, Tamil Nadu, India"
+          ></iframe>
+          <div class="cf-map__card">
+            <span class="cf-map__pin" aria-hidden="true"><i class="fa-solid fa-mug-hot"></i></span>
+            <span class="cf-map__info">
+              <b>Stackly Roastery</b>
+              Salem, Tamil Nadu, India
+              <span class="cf-map__rating"><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i> <em>4.9</em></span>
+            </span>
+            <a class="cf-dir" href="https://www.google.com/maps/search/?api=1&amp;query=Stackly+Roastery+Salem+Tamil+Nadu+India" target="_blank" rel="noopener">Get directions <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+            <!-- CTA -->
+    <section class="cf-sec cf-cta" id="join" aria-labelledby="cfCtaTitle">
+      <div class="cf-wrap">
+        <div class="cf-cta__card" data-aos="fade-up">
+          <div class="cf-cta__text">
+            <p class="cf-kicker">JOIN THE COFFEE CLUB</p>
+            <h2 class="cf-display cf-h2 cf-h2--sm" id="cfCtaTitle">Get 15% off your <em>first bag of beans.</em></h2>
+            <p class="cf-cta__lead">Sign up free and enjoy small perks every time you visit or order from Stackly.</p>
+
+            <ul class="cf-cta__list">
+              <li>
+                <span class="cf-cta__ico"><i class="fa-solid fa-tags" aria-hidden="true"></i></span>
+                <span><b>15% off</b>your first bag of fresh-roasted beans</span>
+              </li>
+              <li>
+                <span class="cf-cta__ico"><i class="fa-solid fa-cake-candles" aria-hidden="true"></i></span>
+                <span><b>Free birthday drink</b>any size, on the house</span>
+              </li>
+              <li>
+                <span class="cf-cta__ico"><i class="fa-solid fa-seedling" aria-hidden="true"></i></span>
+                <span><b>Early access</b>to new small-batch roasts</span>
+              </li>
+            </ul>
+
+            <div class="cf-cta__actions" data-aos="fade-up" data-aos-delay="150">
+              <a href="login.html" class="cf-btn">Join for free <span class="cf-btn__icon"><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span></a>
+              <a href="menu.html" class="cf-cta__ghost">Browse the menu</a>
+            </div>
+          </div>
+
+          <div class="cf-cta__art" data-aos="zoom-in" data-aos-duration="1000">
+            <div class="cf-cta__arch" aria-hidden="true"></div>
+            <img class="cf-cta__img" src="assets/images/cup-cortado.webp" alt="Latte art coffee set" width="526" height="526" loading="lazy">
+            <span class="cf-cta__chip cf-cta__chip--a"><i class="fa-solid fa-star" aria-hidden="true"></i>4.9 from 2,400+ regulars</span>
+            <span class="cf-cta__chip cf-cta__chip--b"><i class="fa-solid fa-fire-flame-curved" aria-hidden="true"></i>Roasted this week</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="cf-footer" id="contact">
+    <div class="cf-wrap">
+      <div class="cf-fcta" data-aos="fade-up">
+        <h3 class="cf-display">Got Event in Mind?<br>Let’s collaborate.</h3>
+        <form class="cf-form" id="cfForm" novalidate>
+          <input type="email" placeholder="Enter your email" aria-label="Email address" required>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+
+      <div class="cf-fgrid">
+        <div class="cf-fcol cf-fcol--brand" data-aos="fade-up">
+          <a href="index.html" class="cf-logo cf-logo--footer" aria-label="Stackly home"><img src="assets/images/stackly-logo.webp" alt="Stackly"></a>
+          <p>Small-batch coffee roasters. Sourced with respect, roasted with patience, served with a smile.</p>
+          <h4>Follow us</h4>
+          <div class="cf-social">
+            <a href="404.html" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+            <a href="404.html" aria-label="X (Twitter)"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a>
+            <a href="404.html" aria-label="Facebook"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
+            <a href="404.html" aria-label="YouTube"><i class="fa-brands fa-youtube" aria-hidden="true"></i></a>
+          </div>
+        </div>
+        <nav class="cf-fcol" data-aos="fade-up" data-aos-delay="100" aria-label="Footer">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="origins.html">Origins</a></li>
+            <li><a href="experience.html">Experience</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="cf-fcol" data-aos="fade-up" data-aos-delay="200">
+          <h4>Opening hours</h4>
+          <ul class="cf-fhours">
+            <li><b>Monday – Friday</b>7:00 am – 8:00 pm</li>
+            <li><b>Saturday</b>8:00 am – 9:00 pm</li>
+            <li><b>Sunday</b>10:00 am – 6:00 pm</li>
+          </ul>
+        </div>
+        <div class="cf-fcol cf-fcol--contact" data-aos="fade-up" data-aos-delay="300">
+          <h4>Contact us</h4>
+          <ul class="cf-fcontact">
+            <li><i class="fa-solid fa-phone" aria-hidden="true"></i><a href="404.html">+91 9876543210</a>
+            </li>
+            <li><i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+              <address>Salem, Tamil Nadu, India.</address>
+            </li>
+            <li><i class="fa-solid fa-envelope" aria-hidden="true"></i><a href="mailto:404.html">info@stackly.com</a>
+            </li>
+            <li><i class="fa-solid fa-mobile-screen-button" aria-hidden="true"></i><a href="404.html">+91 98765
+                43210</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="cf-fbar" data-aos="fade-up" data-aos-delay="100">
+        <p>© 2026 Stackly. All rights reserved.</p>
+        <a href="index.html" class="cf-top">Back to top <span><i class="fa-solid fa-arrow-up"
+              aria-hidden="true"></i></span></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.3.11/dist/lenis.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>
