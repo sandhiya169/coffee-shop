@@ -517,7 +517,7 @@
   content: "";
   position: absolute;
   top: 50%;
-  left: calc(-1 * min(8%, var(--cf-pad) - 12px));
+  left: 0;
   width: 62%;
   aspect-ratio: 1;
   transform: translateY(-50%);
@@ -530,9 +530,8 @@
   position: relative;
   z-index: 1;
   flex: none;
-  width: 54%;
-  /* never pull the cup further left than the container's own side padding */
-  margin-left: calc(-1 * min(6%, var(--cf-pad) - 12px))
+  width: 50%;
+  margin-left: 0
 }
 
 .ct-wreath img {
@@ -547,7 +546,7 @@
   z-index: 1;
   flex: none;
   display: grid;
-  width: 56%;
+  width: 54%;
   margin-left: -4%;
   padding: clamp(24px, 3.4vw, 48px) clamp(18px, 3vw, 44px);
   border-radius: 24px;
