@@ -1,5 +1,3 @@
-
-
 /* =====================
    GLOBALS
    ===================== */
@@ -4824,4 +4822,23 @@ body.cf .cf-fcontact address {
   .cf-fhours li {
     font-size: var(--cf-fs-sm)
   }
+}
+
+/* ---------- Section heading reveal (GSAP, see main.js) ---------- */
+.cf-stagger-mask {
+  display: inline-block;
+  vertical-align: top;
+  overflow: hidden;
+  /* room for descenders / italic overhang; cancelled by the negative margin so layout is unchanged */
+  padding: .08em .06em .22em;
+  margin: -.08em -.06em -.22em
+}
+
+.cf-stagger-word {
+  display: inline-block;
+  vertical-align: top
+}
+
+.is-revealed .cf-stagger-mask {
+  overflow: visible
 }

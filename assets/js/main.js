@@ -367,16 +367,32 @@
   }
 })();
 
+/* ── Section headings: GSAP masked word reveal ──
+   Every h2/h3/h4 in <main> and the footer is split into words. Each word sits in
+   a clipping mask and rises into place (staggered) the first time the heading
+   scrolls into view. Styles for .cf-stagger-mask / .cf-stagger-word live in
+   style.css. The hero <h1> keeps its own CSS intro and is not touched here. */
 (function () {
   'use strict';
 
   var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   if (!window.gsap || reduceMotion) return;
 
+  var gsap = window.gsap;
+  var root = document.documentElement;
+
   var selector = 'main section h2, main section h3, main section h4, footer h2, footer h3, footer h4';
-  var headings = Array.prototype.slice.call(document.querySelectorAll(selector));
+  /* Skip the header, the looping Specials marquee (its cards are cloned later),
+     and anything already hidden from assistive tech (e.g. the preloader). */
+  var skip = '.cf-header, #cfmSpecialsTrack, [aria-hidden="true"]';
+
+  var headings = Array.prototype.slice.call(document.querySelectorAll(selector)).filter(function (h) {
+    return !h.closest(skip) && !h.classList.contains('cf-h1--hero');
+  });
   if (!headings.length) return;
 
+  /* Wrap every word in <span.cf-stagger-mask><span.cf-stagger-word>…</span></span>,
+     keeping inner markup (<em>, <a>, <br>) intact. Returns the word spans. */
   function splitIntoWords(heading) {
     var walker = document.createTreeWalker(heading, NodeFilter.SHOW_TEXT, {
       acceptNode: function (node) {
@@ -394,12 +410,13 @@
         if (/^\s+$/.test(part)) {
           fragment.appendChild(document.createTextNode(part));
         } else {
+          var mask = document.createElement('span');
           var word = document.createElement('span');
+          mask.className = 'cf-stagger-mask';
           word.className = 'cf-stagger-word';
           word.textContent = part;
-          word.style.display = 'inline-block';
-          word.style.willChange = 'transform, opacity';
-          fragment.appendChild(word);
+          mask.appendChild(word);
+          fragment.appendChild(mask);
           words.push(word);
         }
       });
@@ -408,35 +425,120 @@
     return words;
   }
 
+  /* Big section titles get a slower, longer rise than small card titles. */
+  function profile(heading) {
+    var big = heading.tagName === 'H2';
+    return big
+      ? { duration: 1.0, stagger: 0.075, ease: 'power4.out', from: 130 }
+      : { duration: 0.7, stagger: 0.045, ease: 'power3.out', from: 115 };
+  }
+
+  function finish(heading, words) {
+    gsap.set(words, { clearProps: 'transform,willChange' });
+    heading.classList.add('is-revealed');
+  }
+
+  function reveal(heading, words, instant) {
+    if (instant) { finish(heading, words); return; }
+    var p = profile(heading);
+    gsap.to(words, {
+      yPercent: 0,
+      rotate: 0,
+      duration: p.duration,
+      stagger: p.stagger,
+      ease: p.ease,
+      overwrite: 'auto',
+      onComplete: function () { finish(heading, words); }
+    });
+  }
+
+  var items = [];
   headings.forEach(function (heading) {
-    if (heading.classList.contains('cf-h1--hero') || heading.dataset.staggerReady === 'true') return;
+    if (heading.dataset.staggerReady === 'true') return;
     heading.dataset.staggerReady = 'true';
     var words = splitIntoWords(heading);
     if (!words.length) return;
-
-    if ('IntersectionObserver' in window) {
-      var observer = new IntersectionObserver(function (entries) {
-        entries.forEach(function (entry) {
-          if (!entry.isIntersecting) return;
-          observer.unobserve(heading);
-          window.gsap.fromTo(words,
-            { y: '0.65em', autoAlpha: 0 },
-            {
-              y: '0em',
-              autoAlpha: 1,
-              duration: 0.65,
-              stagger: 0.055,
-              ease: 'power3.out',
-              clearProps: 'transform,opacity,visibility,willChange'
-            }
-          );
-        });
-      }, { threshold: 0.12, rootMargin: '0px 0px -4% 0px' });
-      observer.observe(heading);
-    } else {
-      window.gsap.set(words, { clearProps: 'all' });
-    }
+    /* Hide right away (the words are clipped by their masks) so there is no flash. */
+    var p = profile(heading);
+    gsap.set(words, { yPercent: p.from, rotate: 4, transformOrigin: '0% 100%' });
+    items.push({ heading: heading, words: words });
   });
+  if (!items.length) return;
+
+  function observe() {
+    if (!('IntersectionObserver' in window)) {
+      items.forEach(function (it) { finish(it.heading, it.words); });
+      return;
+    }
+    var byEl = new Map();
+    items.forEach(function (it) { byEl.set(it.heading, it); });
+
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        var it = byEl.get(entry.target);
+        if (!it) return;
+        if (entry.isIntersecting) {
+          byEl.delete(entry.target);
+          io.unobserve(entry.target);
+          reveal(it.heading, it.words, false);
+        } else if (entry.boundingClientRect.bottom < 0) {
+          /* Already scrolled past (page reloaded mid-scroll / anchor jump):
+             show it straight away so it is never left hidden. */
+          byEl.delete(entry.target);
+          io.unobserve(entry.target);
+          reveal(it.heading, it.words, true);
+        }
+      });
+    }, { threshold: 0, rootMargin: '0px 0px -10% 0px' });
+
+    items.forEach(function (it) { io.observe(it.heading); });
+
+    /* The observer only reports *changes*, so two cases need a manual sweep on scroll:
+       1) a heading jumped over between frames (scrollbar drag, End key, anchor jump)
+          never "intersects" - reveal it instantly once it is above the viewport;
+       2) headings in the last 10% of the page can never rise above the observer's
+          bottom margin - reveal them (animated) once the user reaches the bottom. */
+    var ticking = false;
+    function sweep() {
+      ticking = false;
+      if (!byEl.size) {
+        window.removeEventListener('scroll', onScroll);
+        window.removeEventListener('resize', onScroll);
+        return;
+      }
+      var vh = window.innerHeight;
+      var atBottom = vh + window.pageYOffset >= document.documentElement.scrollHeight - 4;
+      byEl.forEach(function (it, el) {
+        var r = el.getBoundingClientRect();
+        if (!r.width && !r.height) return;            /* not rendered yet (hidden tab / panel) */
+        if (r.bottom < 0) {
+          byEl.delete(el); io.unobserve(el);
+          reveal(it.heading, it.words, true);
+        } else if (atBottom && r.top < vh) {
+          byEl.delete(el); io.unobserve(el);
+          reveal(it.heading, it.words, false);
+        }
+      });
+    }
+    function onScroll() {
+      if (!ticking) { ticking = true; window.requestAnimationFrame(sweep); }
+    }
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll);
+  }
+
+  /* Wait for the preloader to lift, otherwise headings already on screen would
+     animate while still covered and the user would never see them. */
+  if (!root.classList.contains('cf-loading')) {
+    observe();
+  } else {
+    var mo = new MutationObserver(function () {
+      if (root.classList.contains('cf-loading')) return;
+      mo.disconnect();
+      setTimeout(observe, 120);
+    });
+    mo.observe(root, { attributes: true, attributeFilter: ['class'] });
+  }
 })();
 
 (function () {
@@ -566,4 +668,3 @@
     });
   });
 })();
-

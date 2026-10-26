@@ -1,5 +1,3 @@
-
-
 .ct-page {
   --ct-ui: var(--cf-body);
   --ct-cream: #fff5eb;
@@ -21,7 +19,8 @@
 .ct-hero {
   position: relative;
   overflow: hidden;
-  min-height: 100vh;
+  min-height: clamp(600px, 100vh, 880px);
+  min-height: clamp(600px, 100svh, 880px);
   display: flex;
   flex-direction: column
 }
@@ -30,7 +29,8 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   flex: 1;
-  min-height: 100vh
+  min-height: clamp(600px, 100vh, 880px);
+  min-height: clamp(600px, 100svh, 880px)
 }
 
 /* ---- LEFT side ---- */
@@ -189,7 +189,7 @@
 
 .ct-hero__float {
   position: absolute;
-  inset: 0;
+  inset: -12px 0 -12vh 0;
   translate: 0 calc(var(--ct-par, 0) * 1px);
   animation: ct-bob 6s ease-in-out infinite alternate
 }
@@ -264,6 +264,7 @@
   }
 
   .ct-hero {
+    height: auto;
     min-height: 0
   }
   .ct-hero__text {
@@ -354,7 +355,7 @@
 
 
 .ct-reach {
-  margin-top: var(--ct-s1)
+  margin-top: 0
 }
 
 .ct-reach .ct-title {
@@ -1427,7 +1428,7 @@ body.cf .ct-brew__head .cf-kicker {
 }
 
 .ct-reach.ct-band {
-  margin-top: clamp(48px, 6vw, 88px)
+  margin-top: 0
 }
 
 .ct-form-sec {
@@ -1526,7 +1527,7 @@ body.cf .ct-faq__side .cf-kicker::before {
 
   .ct-hero__float {
     position: absolute;
-    inset: 0
+    inset: -12px 0 -12vh 0
   }
 
   .ct-hero__crop {
@@ -1745,4 +1746,3 @@ body.cf .ct-faq__side .cf-kicker::before {
 .cf-loading .ct-hero [data-aos="fade-left"] { transform: translate3d(100px, 0, 0) !important; }
 .cf-loading .ct-hero [data-aos="fade-right"] { transform: translate3d(-100px, 0, 0) !important; }
 .js .ct-hero__media { animation: none !important; }
-
