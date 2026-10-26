@@ -224,6 +224,10 @@
   gap: 30px
 }
 
+.cfm-row--a-rev {
+  grid-template-columns: 825fr 465fr
+}
+
 .cfm-row--b {
   grid-template-columns: 1fr 1fr
 }
@@ -293,7 +297,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: auto
+  margin-top: 0
 }
 
 .cfm-price {
@@ -305,6 +309,10 @@
   color: inherit;
   text-decoration: none;
   transition: color .25s ease
+}
+
+.cfm-card__text .cf-h3 {
+  color: var(--cf-gold)
 }
 
 .cfm-card__link:hover,

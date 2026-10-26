@@ -668,3 +668,17 @@
     });
   });
 })();
+
+/* ── Back to top: smooth scroll without page reload ── */
+(function () {
+  document.addEventListener('click', function (e) {
+    var btn = e.target.closest('a.cf-top');
+    if (!btn) return;
+    e.preventDefault();
+    if (window.cfLenis) {
+      window.cfLenis.scrollTo(0, { duration: 1.2, easing: function (t) { return 1 - Math.pow(1 - t, 4); } });
+    } else {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  });
+})();
