@@ -4824,12 +4824,10 @@ body.cf .cf-fcontact address {
   }
 }
 
-/* ---------- Section heading reveal (GSAP, see main.js) ---------- */
 .cf-stagger-mask {
   display: inline-block;
   vertical-align: top;
   overflow: hidden;
-  /* room for descenders / italic overhang; cancelled by the negative margin so layout is unchanged */
   padding: .08em .06em .22em;
   margin: -.08em -.06em -.22em
 }

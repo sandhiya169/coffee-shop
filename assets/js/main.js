@@ -367,11 +367,6 @@
   }
 })();
 
-/* ── Section headings: GSAP masked word reveal ──
-   Every h2/h3/h4 in <main> and the footer is split into words. Each word sits in
-   a clipping mask and rises into place (staggered) the first time the heading
-   scrolls into view. Styles for .cf-stagger-mask / .cf-stagger-word live in
-   style.css. The hero <h1> keeps its own CSS intro and is not touched here. */
 (function () {
   'use strict';
 
@@ -382,8 +377,7 @@
   var root = document.documentElement;
 
   var selector = 'main section h2, main section h3, main section h4, footer h2, footer h3, footer h4';
-  /* Skip the header, the looping Specials marquee (its cards are cloned later),
-     and anything already hidden from assistive tech (e.g. the preloader). */
+
   var skip = '.cf-header, #cfmSpecialsTrack, [aria-hidden="true"]';
 
   var headings = Array.prototype.slice.call(document.querySelectorAll(selector)).filter(function (h) {
@@ -391,8 +385,7 @@
   });
   if (!headings.length) return;
 
-  /* Wrap every word in <span.cf-stagger-mask><span.cf-stagger-word>…</span></span>,
-     keeping inner markup (<em>, <a>, <br>) intact. Returns the word spans. */
+ 
   function splitIntoWords(heading) {
     var walker = document.createTreeWalker(heading, NodeFilter.SHOW_TEXT, {
       acceptNode: function (node) {
@@ -482,8 +475,6 @@
           io.unobserve(entry.target);
           reveal(it.heading, it.words, false);
         } else if (entry.boundingClientRect.bottom < 0) {
-          /* Already scrolled past (page reloaded mid-scroll / anchor jump):
-             show it straight away so it is never left hidden. */
           byEl.delete(entry.target);
           io.unobserve(entry.target);
           reveal(it.heading, it.words, true);
@@ -493,11 +484,6 @@
 
     items.forEach(function (it) { io.observe(it.heading); });
 
-    /* The observer only reports *changes*, so two cases need a manual sweep on scroll:
-       1) a heading jumped over between frames (scrollbar drag, End key, anchor jump)
-          never "intersects" - reveal it instantly once it is above the viewport;
-       2) headings in the last 10% of the page can never rise above the observer's
-          bottom margin - reveal them (animated) once the user reaches the bottom. */
     var ticking = false;
     function sweep() {
       ticking = false;
@@ -510,7 +496,7 @@
       var atBottom = vh + window.pageYOffset >= document.documentElement.scrollHeight - 4;
       byEl.forEach(function (it, el) {
         var r = el.getBoundingClientRect();
-        if (!r.width && !r.height) return;            /* not rendered yet (hidden tab / panel) */
+        if (!r.width && !r.height) return;            
         if (r.bottom < 0) {
           byEl.delete(el); io.unobserve(el);
           reveal(it.heading, it.words, true);
@@ -527,8 +513,7 @@
     window.addEventListener('resize', onScroll);
   }
 
-  /* Wait for the preloader to lift, otherwise headings already on screen would
-     animate while still covered and the user would never see them. */
+ 
   if (!root.classList.contains('cf-loading')) {
     observe();
   } else {
@@ -576,11 +561,11 @@
     track.appendChild(clone);
   });
 
-  /* Expand grid to hold originals + clones */
+
   track.style.gridTemplateColumns = 'repeat(' + (cardCount * 2) + ', minmax(280px, 320px))';
 
-  /* ── Auto-scroll state ── */
-  var speed  = 0.8;   /* px per frame */
+
+  var speed  = 0.8;   
   var paused = false;
   var resumeTimer;
 
@@ -588,7 +573,7 @@
     if (!paused) {
       track.scrollLeft += speed;
 
-      /* Seamless loop: reset when first set has fully scrolled past */
+   
       var halfWidth = track.scrollWidth / 2;
       if (track.scrollLeft >= halfWidth) {
         track.scrollLeft -= halfWidth;
@@ -619,7 +604,7 @@
   }
 })();
 
-/* ── Brew Your Way: accessible tab switch ── */
+
 (function () {
   var tabList = document.getElementById('cfmBrewTabs');
   if (!tabList) return;
@@ -639,7 +624,6 @@
       var show     = p.id === targetId;
       if (show) {
         p.removeAttribute('hidden');
-        /* re-trigger bar animations by cloning fills */
         p.querySelectorAll('.cfm-brew__bar-fill').forEach(function (fill) {
           var clone = fill.cloneNode(true);
           fill.parentNode.replaceChild(clone, fill);
